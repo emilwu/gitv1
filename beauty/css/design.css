@@ -1,3 +1,4 @@
+/*test*/
 @charset "UTF-8";
 .text-left {
   text-align: left; }
@@ -230,7 +231,9 @@ body {
   /* Chrome 19+ & Safari 6+ */ }
 
 .fix_ie_png {
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#00FFFFFF, endColorstr=#00FFFFFF ); }
+  filter: progid:DXImageTransform.Microsoft.gradient(
+ startColorstr=#00FFFFFF, endColorstr=#00FFFFFF
+ ); }
 
 @media all and (min-width: 721px) {
   #ZenFone__Zoom {
