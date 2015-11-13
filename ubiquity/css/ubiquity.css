@@ -1,0 +1,4009 @@
+@charset "UTF-8";
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+html {
+  font-size: 15px; }
+
+body {
+  font-size: 1em;
+  line-height: 1.3333333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 0em; }
+
+p {
+  font-size: 1em;
+  line-height: 1.3333333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 0.6666666667em;
+  color: #333333; }
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
+    transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0); }
+  20% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, 0, 0);
+    transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, 0, 0); }
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) translate3d(-50%, 0, 0);
+    transform: scale3d(0.9, 0.9, 0.9) translate3d(-50%, 0, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03) translate3d(-50%, 0, 0);
+    transform: scale3d(1.03, 1.03, 1.03) translate3d(-50%, 0, 0); }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.97, 0.97, 0.97) translate3d(-50%, 0, 0);
+    transform: scale3d(0.97, 0.97, 0.97) translate3d(-50%, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0);
+    transform: scale3d(1, 1, 1) translate3d(-50%, 0, 0); } }
+
+.sprite {
+  background-repeat: no-repeat;
+  display: block; }
+
+.sprite-arrow_l {
+  width: 65px;
+  height: 130px;
+  background-position: -5px -5px; }
+
+.sprite-arrow_l_black {
+  width: 49px;
+  height: 96px;
+  background-position: -80px -5px; }
+
+.sprite-arrow_r {
+  width: 65px;
+  height: 130px;
+  background-position: -139px -5px; }
+
+.sprite-arrow_r_black {
+  width: 49px;
+  height: 96px;
+  background-position: -214px -5px; }
+
+.sprite-black {
+  width: 41px;
+  height: 41px;
+  background-position: -80px -111px; }
+
+.sprite-gray {
+  width: 41px;
+  height: 41px;
+  background-position: -214px -111px; }
+
+.sprite-green {
+  width: 44px;
+  height: 44px;
+  background-position: -5px -162px; }
+
+.sprite-pink {
+  width: 45px;
+  height: 44px;
+  background-position: -59px -162px; }
+
+.sprite-white {
+  width: 45px;
+  height: 44px;
+  background-position: -114px -162px; }
+
+.play__icon:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAADJklEQVRYw73YTWwWVRQG4KdD1RjTEmNjt0ZNtC4GXQiiTLAmklShdKFbomAYSQTqRjbu3IhuBBd2iPizM42Jjb9JF/7kolgIQWcBGuLCJVhi2iYSNRUXc1vqZ03nm6/1LGfuOee9d+697/tOlzYiK8qNeAwbcRduwXrM4DJ+xCl8GvL0VN26XTUa34jdOIh5fIwTOIdLIU9nsqJcj1sxgAzb0Y0jOB7y9EpjEFlR7oyFzuLVkKfftLFqm/EC7sNoyNOJtkBkRXkDjuIR7A15+kXd5svUGsQxfI4DIU9/XxFEVpS9mMCveDrk6WxTAC0138bNGGmt2dUy+Hp8hp+Qhzy92imAJbXXYQy3Yyjk6R8L75KWsa9jDvtWEwCEPJ3Hs5iNfRZjEURWlCMYxK6YsOoR6+7CYOyH+DniMTyv2gONN2HdyIryYbyDgZCnVxZWYje+/z8AxBX5Et9hD9c+x0EcbnM2R7Oi7O4Ay2EcgCQryk34q52LKMZ+TGZF2ddwNU5iPivKTQm24cOGsxnE6awoNzTM/wjbEjyg4oKmcRu+zoryiQa5J7A5UZHO+Q5AwE0Yz4rypawokzbyzuHuREXHFzsEQXXcX8REvKbrxCX0JehdDX5YEjvwbp2BsW9Pgtk2kNeJT/BUnYFZUfZgLlEpov5VaH4VL2M45OlMzZx+THerNuUALnQA4DfsCXn6Xpt59+CHBN9iSwcAfsaWBgDgIZxMMInhhgC+wv0hT882zB/GZBLydEp1fT/YZoExPBry9Jcm3aMGXRfydGqBgI7gEHbWLRLydF/D2S/EIZWOXWTRt7AhitI1j6gn7sXxRRDRF4yiiGd3LQH0qNT36IIfaRW6x9CHJ9dC4kWxO47LIU/3LjxvJZvnIog3sqJc0Z01ADCmcmr7l777B4gow7fjTry/Wtd5rDOOO/B4qwH6F+1GUhnCNM5kRbm1QwBbcSbWG1qOLFfyoiN4TeVFX4mSrG7zpV70+ZCnH/zX2Lqu/BmVGP5TJcmCinMuhjydizu+3zVXvgPXqe6fNzty5csAav0/0YdelauaVv2fOK2yklN1XdzfdfIarq20xZsAAAAASUVORK5CYII="); }
+
+.icon__left__arrow {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAACbCAYAAAAa/HfkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MDM3YTljNy1lZjkwLWQ4NGMtYTcwZC03OGM4NDg0NjAzYmQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDVGQjNDREY4MDYyMTFFNTg0QTFBRTczNzFDNDFDNTMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDVGQjNDREU4MDYyMTFFNTg0QTFBRTczNzFDNDFDNTMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ZGNkZjRmNDItMzk0ZS1jNDRhLTg4ZTctNWY1M2Y5NjI4MTUwIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NDZhZjExODAtNjFhMy0xMWU1LTkzZGUtOTIwNmM2N2RmYjRiIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+lOkdwQAAAthJREFUeNrs3U1Ow0AMhuEWdZVzAregEj+XAHHObANdsKFhUcb2+LNfS9lEahaPMkkjjT8ft207UGN1BwGIIIJIgQgiiCBSIIIIIogUiN512ju5rmtnk5dlWc7cif+v5+/jieU8Bnj+zw9BHAQE0QAQxH3ATxDHAR9BHAfcQAwG7IhoDtgN0QWwE6IbYBdEV8AOiO6A1RFDACsjhgFWRQwFrIgYDlgNcQpgJcRpgFUQpwJWQJwOqI6YAlAZMQ2gKmIqQEXEdIBqiCkBlRDTAqogpgZUQEwPmB1RAjAzogxgVkQpwIyIcoDZECUBMyHKAmZBlAbMgCgPOBuxBOBMxDKAsxBLAc5ALAcYjVgSMBKxLGAUYmnACMTygN6ILQA9EdsAXurkcM2Xw3W7a1lAjzuxHaA1YktAS8S2gFaIrQEtENsDjiICOIgI4CAigIOIAA4iAjiICOAgIoCDiAAOIgI4iAigAeJx5xx4NyJe7sK3X+cevo/3P4BBBNL37Qyk0f9EII2+WIA0+nYG0gARSCNEII0QgTRCBNIIEUgjRCAPdjsgWkNa7sVpC2m9K6wlpMcmz3aQXjtlW0F67tluA+ndPXCBfK0OGdHHcq4OGdVRVRoysrevLGR0l+lfkB/KkDP6nfcg75UhZ3Xel4KcmQFRBnJ2GkkJyAy5OPKQWRKapCEzZYXJQmZLrZOEzJifKAeZNclTCjJzpqwMZPZ0YwlIhZzt9JAqie+pIZVmD6SFVJuCkRJScR5LOkjVyUCpIJVnVKWBVJ+WlgKywty+6ZBVJkhOhaw0y3QaZLWpulMgK853DoesOmk8FLLyzPswyMqIYZDVEUMgOyC6Q3ZBdIXshOgG2Q3RBbIjojnk6dC3fmL9n35BXurhlgsdt+06vWpd106YV7loy7IcWc7jS5tnYjQkiAaQJ+x2XzY31e6LhWI5gwgiiBSIIIIIIgQggggiBaJlfQkwAFslPR5pZL7CAAAAAElFTkSuQmCC"); }
+
+.icon__right__arrow {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAACbCAYAAADxy8znAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MDM3YTljNy1lZjkwLWQ4NGMtYTcwZC03OGM4NDg0NjAzYmQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDVGQjNDRTM4MDYyMTFFNTg0QTFBRTczNzFDNDFDNTMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDVGQjNDRTI4MDYyMTFFNTg0QTFBRTczNzFDNDFDNTMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ZGNkZjRmNDItMzk0ZS1jNDRhLTg4ZTctNWY1M2Y5NjI4MTUwIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NDZhZjExODAtNjFhMy0xMWU1LTkzZGUtOTIwNmM2N2RmYjRiIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TCPT7wAAAshJREFUeNrs3MFKA0EQBNBEctrvVP/CgPErFL9zr+vm4CUHCaZ6prqqGoZAYC+PyQ7p6e7jtm2HxOPxFIJABjKQiUAGMpCBTAQykIFMBDKQjHF65OF1XS/7x9kVb1kW2I5829cl+xHz0w4m8B1pj4k8bKwxH4X8DiYG8jWYGMgtmLh3ZDCBh409JvLUtsZE/9e2xaxIWlhiVmV/7DAr02hWmNX5SBvMEYldC8xRGXJ5zJFXDdKYo+9sZDFnXH5JYs66RZTDnHkdK4U5+15bBpOhQEACk6XSoj0mU8lKa0y22p+2mIxFVC0xWavR2mEyl/W1wmSvj2yD2aHQtAVml4pdesxOpc/UmN1qyGkxOxbjU2J27Wqgw+zcHkKF2b3PhgZToWGJAlOl82s6plIL3VRMtV7EaZiKTZ1TMFW7Y4djKrcZD8VU79cehunQ+D4E02WCQDmm0yiGvzDfA4nBPD+K6TgcpATTdcoKHNN5XA0U033uDwwzA5RAmIEEYQYShBlIEGYgQZiBBGEGEoQZSBBmIO8HvY1jIO+PK9bnvl5uvv843AwgDSQAMZAgxECCEAMJQgwkCDGQIMRAghADCUJ0h4QhOkNCEV0h4YiOkCWIbpBliE6QpYgukOWIDpBDENUhhyEqQw5FVIUcjqgIOQVRDXIaohLkVEQVyOmICpAUiN0haRA7Q1IhdoWkQ+wISYnYDZIWsRMkNWIXSHrEDpAtENkh2yAyQ7ZCZIVsh8gI2RKRDbItIhNka0QWyPaIDJASiLMhZRBnQkohzoKUQ5wBKYk4GlIWcSSkNOIoSHnEEZAWiNc4FSN+7etZHbFyR1ohVkHaIVZAWiKiIW0RkZDWiChIe0QEZBBBkEH83VHbtv374XVdN2fEZVlKTm3LnYiGtEZEQdojIiCDiDhsErVJi0AmAhnIQCYCGchABjIRyEAG0jl+BBgAWDs+2El12r0AAAAASUVORK5CYII="); }
+
+body {
+  background-attachment: scroll !important; }
+
+#ZenFone__Zoom {
+  position: relative;
+  font-size: 15px;
+  line-height: 1.3;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition-property: opacity;
+  -khtml-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 700ms;
+  -khtml-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -ms-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98);
+  -khtml-transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.33, 0.98); }
+
+#main-zone > .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important; }
+  #main-zone > .container .overview-wrapper {
+    width: 100% !important; }
+
+.inline__block {
+  display: inline-block; }
+
+.smooth__animation {
+  -webkit-transition-property: "opacity, -webkit-transform";
+  -khtml-transition-property: "opacity, -webkit-transform";
+  -moz-transition-property: "opacity, -webkit-transform";
+  -ms-transition-property: "opacity, -webkit-transform";
+  -o-transition-property: "opacity, -webkit-transform";
+  transition-property: "opacity, -webkit-transform";
+  -webkit-transition-duration: 1.25s, 1.25s;
+  -khtml-transition-duration: 1.25s, 1.25s;
+  -moz-transition-duration: 1.25s, 1.25s;
+  -ms-transition-duration: 1.25s, 1.25s;
+  -o-transition-duration: 1.25s, 1.25s;
+  transition-duration: 1.25s, 1.25s;
+  -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+  -khtml-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+  -moz-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+  -ms-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+  -o-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95), cubic-bezier(0.39, 0.575, 0.565, 1); }
+
+.wd__animation__easeout {
+  -webkit-transition-property: "opacity, -webkit-transform";
+  -khtml-transition-property: "opacity, -webkit-transform";
+  -moz-transition-property: "opacity, -webkit-transform";
+  -ms-transition-property: "opacity, -webkit-transform";
+  -o-transition-property: "opacity, -webkit-transform";
+  transition-property: "opacity, -webkit-transform";
+  -webkit-transition-duration: 500ms, 500ms;
+  -khtml-transition-duration: 500ms, 500ms;
+  -moz-transition-duration: 500ms, 500ms;
+  -ms-transition-duration: 500ms, 500ms;
+  -o-transition-duration: 500ms, 500ms;
+  transition-duration: 500ms, 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  -khtml-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1); }
+
+.clear__background__src {
+  background-image: none !important; }
+
+.brightness, .brightness_gray {
+  -webkit-filter: brightness(100.7%);
+  /* Chrome 19+ & Safari 6+ */ }
+
+.fix_ie_png {
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#00FFFFFF, endColorstr=#00FFFFFF ); }
+
+@media all and (min-width: 721px) {
+  #ZenFone__Zoom {
+    margin-top: 51px; } }
+
+@media (max-width: 959px) and (min-width: 720px) {
+  #af-header,
+  #af-header .af-inner,
+  body #asus-api-footer {
+    min-width: 100%;
+    width: 100%; }
+  #main-zone > .container {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important; } }
+
+@media all and (max-width: 720px) {
+  #ZenFone__Zoom {
+    margin-top: 0px !important; }
+  #main-zone,
+  #main-zone-5,
+  #main-zone-3,
+  #main-zone-4,
+  #main-zone-6 {
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+#main-zone > .container {
+  width: 100% !important;
+  max-width: 100% !important; }
+  #main-zone > .container .overview-wrapper {
+    width: 100% !important; }
+
+.wd__content {
+  color: #333333; }
+  .wd__content .content__slogan {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    position: relative;
+    font-size: 2.8em;
+    color: #a89d5b; }
+  .wd__content .content__title {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    position: relative;
+    font-size: 3.2em;
+    line-height: 1.2; }
+  .wd__content .content__info {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    position: relative;
+    font-size: 1.3em;
+    margin-top: 24px;
+    line-height: 1.5;
+    margin-left: 6px; }
+  .wd__content .content__link {
+    display: inline-block;
+    line-height: 27px !important;
+    font-size: 20px;
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400; }
+    .wd__content .content__link span {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #0088cb;
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px solid transparent; }
+    .wd__content .content__link:link span, .wd__content .content__link:active span, .wd__content .content__link:visited span {
+      border-bottom: 1px solid transparent; }
+    .wd__content .content__link:hover span {
+      border-bottom: 1px solid #0088cb; }
+  @media all and (min-width: 721px) and (max-width: 1300px) {
+    .wd__content .content__link {
+      line-height: 26px !important; } }
+  @media all and (max-width: 720px) {
+    .wd__content .content__link {
+      line-height: 24px !important; } }
+  .wd__content .content__comment {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #999999;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.4; }
+
+.wd__link__arrow:after {
+  content: ">";
+  font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #0088cb;
+  padding-left: 7px; }
+  @media all and (min-width: 721px) and (max-width: 1300px) {
+    .wd__link__arrow:after {
+      padding-left: 3px; } }
+  @media all and (max-width: 720px) {
+    .wd__link__arrow:after {
+      padding-left: 4px; } }
+
+.wd__spec__list * {
+  font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.wd__spec__list {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.wd__spec {
+  display: inline-block;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+  height: 180px;
+  margin-bottom: 33px;
+  margin-right: 14px;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top; }
+
+.spec__detail {
+  height: 151px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 4em; }
+
+.spec__detail span {
+  font-size: 0.6em; }
+
+.spec__detail {
+  font-size: 2em;
+  color: #a89d5b; }
+
+.wd__spec .spec_dis {
+  font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 15px;
+  position: relative;
+  z-index: -1;
+  bottom: 0;
+  color: #636360; }
+
+.wd__spec .spec_dis_top {
+  font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #636360;
+  text-align: center;
+  padding-top: 15px;
+  position: relative;
+  z-index: -1;
+  top: 0; }
+
+.wd__feature {
+  color: #333333; }
+  .wd__feature .wd__feature__discribe__top {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #636360; }
+  .wd__feature .wd__feature__data {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #a89d5b;
+    font-size: 4.3em;
+    margin-bottom: 10px;
+    line-height: 1em; }
+    .wd__feature .wd__feature__data span {
+      font-size: .45em;
+      padding-left: .2em; }
+  .wd__feature .wd__feature__discribe {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 3px;
+    font-size: 1.1em;
+    color: #636360;
+    margin-top: -22px;
+    line-height: 20px;
+    letter-spacing: 0.08em; }
+
+.wd__feature__list .wd__feature {
+  display: inline-block;
+  vertical-align: top; }
+
+.wd__feature__list .wd__feature:first-child {
+  margin-left: 0; }
+
+.wd__feature__list .wd__feature:last-child {
+  margin-right: 0; }
+
+/* Slider */
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("/font/slick.eot");
+  src: url("/font/slick.eot?#iefix") format("embedded-opentype"), url("/font/slick.woff") format("woff"), url("/font/slick.ttf") format("truetype"), url("/font/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev {
+  left: -25px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  .slick-prev:before {
+    content: "←"; }
+    [dir="rtl"] .slick-prev:before {
+      content: "→"; }
+
+.slick-next {
+  right: -25px; }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  .slick-next:before {
+    content: "→"; }
+    [dir="rtl"] .slick-next:before {
+      content: "←"; }
+
+/* Dots */
+.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+.slick__nav {
+  font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #636360;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.6;
+  margin-bottom: 40px; }
+  .slick__nav a {
+    color: #636360; }
+
+.slick-next {
+  right: 25px; }
+
+.slick-prev {
+  left: 25px; }
+
+.slick__prev, .slick__next {
+  z-index: 9999;
+  content: ''; }
+  .slick__prev:before, .slick__next:before {
+    content: ''; }
+
+[dir='rtl'] .slick__prev:before {
+  content: ''; }
+
+[dir='rtl'] .slick__next:before {
+  content: ''; }
+
+.wd__slick .container {
+  max-width: 900px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .wd__slick .container.e1 .slick__info {
+    margin-top: 15em; }
+  .wd__slick .container .slick__half {
+    width: 45%; }
+  .wd__slick .container .slick__left {
+    float: left; }
+  .wd__slick .container .slick__right {
+    float: right; }
+  .wd__slick .container .slick__img, .wd__slick .container .slick__info {
+    width: 100%; }
+
+.sprite__arrow__right {
+  z-index: 1000;
+  width: 49px;
+  height: 96px;
+  background-position: -214px -5px; }
+
+.sprite__arrow__left {
+  z-index: 1000;
+  width: 49px;
+  height: 96px;
+  background-position: -80px -5px; }
+
+.sprite-arrow_r {
+  width: 65px;
+  height: 130px; }
+
+.sprite-arrow_l {
+  width: 65px;
+  height: 130px; }
+
+.slick-prev, .slick-next {
+  margin-top: -55px; }
+
+.ellipse {
+  background: transparent no-repeat scroll center top;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAFICAIAAAA+q3RyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MUM1MDEwQjQ4QTIxMUU1QkQyMkRBMjA2RDk1OUIzNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MUM1MDEwQzQ4QTIxMUU1QkQyMkRBMjA2RDk1OUIzNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQxQzUwMTA5NDhBMjExRTVCRDIyREEyMDZEOTU5QjM1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQxQzUwMTBBNDhBMjExRTVCRDIyREEyMDZEOTU5QjM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+AxOp2AAAMnZJREFUeNrs3euS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");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACvAAAAHeCAIAAADISUmzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyRDA0NjU2QTQ4QTYxMUU1QkQyMkRBMjA2RDk1OUIzNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyRDA0NjU2QjQ4QTYxMUU1QkQyMkRBMjA2RDk1OUIzNSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJEMDQ2NTY4NDhBNjExRTVCRDIyREEyMDZEOTU5QjM1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJEMDQ2NTY5NDhBNjExRTVCRDIyREEyMDZEOTU5QjM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mJ5YoQAAVIFJREFUeNrs3cl2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") \9;
+  height: 328px;
+  width: 2800px\9;
+  height: 478px\9;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  width: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  left: 0px; }
+
+.large-1 {
+  width: 8.3333%; }
+
+.large-2 {
+  width: 16.666%; }
+
+.large-3 {
+  width: 25%; }
+
+.large-4 {
+  width: 33.333%; }
+
+.large-5 {
+  width: 41.666%; }
+
+.large-6 {
+  width: 50%; }
+
+.large-7 {
+  width: 58.333%; }
+
+.large-8 {
+  width: 66.666%; }
+
+.large-9 {
+  width: 75%; }
+
+.large-10 {
+  width: 83.333%; }
+
+.large-11 {
+  width: 91.666%; }
+
+.large-12 {
+  width: 100%; }
+
+.column__pull-1 {
+  left: 8.3333%;
+  right: auto; }
+
+.column__pull-2 {
+  left: 16.666%;
+  right: auto; }
+
+.column__pull-3 {
+  left: 25%;
+  right: auto; }
+
+.column__pull-4 {
+  left: 33.333%;
+  right: auto; }
+
+.column__pull-5 {
+  left: 41.666%;
+  right: auto; }
+
+.column__pull-6 {
+  left: 50%;
+  right: auto; }
+
+.column__pull-7 {
+  left: 58.333%;
+  right: auto; }
+
+.column__pull-8 {
+  left: 66.666%;
+  right: auto; }
+
+.column__pull-9 {
+  left: 75%;
+  right: auto; }
+
+.column__pull-10 {
+  left: 83.33%;
+  right: auto; }
+
+.column__pull-11 {
+  left: 91.666%;
+  right: auto; }
+
+.column__pull-12 {
+  left: 100%;
+  right: auto; }
+
+.section {
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+
+.section_content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%; }
+
+.section_content__medium {
+  max-width: 1366px;
+  margin: auto; }
+
+.row {
+  position: relative; }
+
+.column {
+  position: relative;
+  z-index: 1;
+  float: left;
+  padding: 0;
+  margin: 0; }
+
+.section_content__medium {
+  max-width: 1366px;
+  margin: 0 auto; }
+
+@media all and (max-width: 720px) {
+  .xsmall-12 {
+    width: 100%;
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .xsmall-12 figure, .xsmall-12 div {
+      margin: 0;
+      position: static !important; } }
+
+.col-1 {
+  width: 1%; }
+
+.col-pull-1 {
+  margin-left: 1% !important; }
+
+.col-2 {
+  width: 2%; }
+
+.col-pull-2 {
+  margin-left: 2% !important; }
+
+.col-3 {
+  width: 3%; }
+
+.col-pull-3 {
+  margin-left: 3% !important; }
+
+.col-4 {
+  width: 4%; }
+
+.col-pull-4 {
+  margin-left: 4% !important; }
+
+.col-5 {
+  width: 5%; }
+
+.col-pull-5 {
+  margin-left: 5% !important; }
+
+.col-6 {
+  width: 6%; }
+
+.col-pull-6 {
+  margin-left: 6% !important; }
+
+.col-7 {
+  width: 7%; }
+
+.col-pull-7 {
+  margin-left: 7% !important; }
+
+.col-8 {
+  width: 8%; }
+
+.col-pull-8 {
+  margin-left: 8% !important; }
+
+.col-9 {
+  width: 9%; }
+
+.col-pull-9 {
+  margin-left: 9% !important; }
+
+.col-10 {
+  width: 10%; }
+
+.col-pull-10 {
+  margin-left: 10% !important; }
+
+.col-11 {
+  width: 11%; }
+
+.col-pull-11 {
+  margin-left: 11% !important; }
+
+.col-12 {
+  width: 12%; }
+
+.col-pull-12 {
+  margin-left: 12% !important; }
+
+.col-13 {
+  width: 13%; }
+
+.col-pull-13 {
+  margin-left: 13% !important; }
+
+.col-14 {
+  width: 14%; }
+
+.col-pull-14 {
+  margin-left: 14% !important; }
+
+.col-15 {
+  width: 15%; }
+
+.col-pull-15 {
+  margin-left: 15% !important; }
+
+.col-16 {
+  width: 16%; }
+
+.col-pull-16 {
+  margin-left: 16% !important; }
+
+.col-17 {
+  width: 17%; }
+
+.col-pull-17 {
+  margin-left: 17% !important; }
+
+.col-18 {
+  width: 18%; }
+
+.col-pull-18 {
+  margin-left: 18% !important; }
+
+.col-19 {
+  width: 19%; }
+
+.col-pull-19 {
+  margin-left: 19% !important; }
+
+.col-20 {
+  width: 20%; }
+
+.col-pull-20 {
+  margin-left: 20% !important; }
+
+.col-21 {
+  width: 21%; }
+
+.col-pull-21 {
+  margin-left: 21% !important; }
+
+.col-22 {
+  width: 22%; }
+
+.col-pull-22 {
+  margin-left: 22% !important; }
+
+.col-23 {
+  width: 23%; }
+
+.col-pull-23 {
+  margin-left: 23% !important; }
+
+.col-24 {
+  width: 24%; }
+
+.col-pull-24 {
+  margin-left: 24% !important; }
+
+.col-25 {
+  width: 25%; }
+
+.col-pull-25 {
+  margin-left: 25% !important; }
+
+.col-26 {
+  width: 26%; }
+
+.col-pull-26 {
+  margin-left: 26% !important; }
+
+.col-27 {
+  width: 27%; }
+
+.col-pull-27 {
+  margin-left: 27% !important; }
+
+.col-28 {
+  width: 28%; }
+
+.col-pull-28 {
+  margin-left: 28% !important; }
+
+.col-29 {
+  width: 29%; }
+
+.col-pull-29 {
+  margin-left: 29% !important; }
+
+.col-30 {
+  width: 30%; }
+
+.col-pull-30 {
+  margin-left: 30% !important; }
+
+.col-31 {
+  width: 31%; }
+
+.col-pull-31 {
+  margin-left: 31% !important; }
+
+.col-32 {
+  width: 32%; }
+
+.col-pull-32 {
+  margin-left: 32% !important; }
+
+.col-33 {
+  width: 33%; }
+
+.col-pull-33 {
+  margin-left: 33% !important; }
+
+.col-34 {
+  width: 34%; }
+
+.col-pull-34 {
+  margin-left: 34% !important; }
+
+.col-35 {
+  width: 35%; }
+
+.col-pull-35 {
+  margin-left: 35% !important; }
+
+.col-36 {
+  width: 36%; }
+
+.col-pull-36 {
+  margin-left: 36% !important; }
+
+.col-37 {
+  width: 37%; }
+
+.col-pull-37 {
+  margin-left: 37% !important; }
+
+.col-38 {
+  width: 38%; }
+
+.col-pull-38 {
+  margin-left: 38% !important; }
+
+.col-39 {
+  width: 39%; }
+
+.col-pull-39 {
+  margin-left: 39% !important; }
+
+.col-40 {
+  width: 40%; }
+
+.col-pull-40 {
+  margin-left: 40% !important; }
+
+.col-41 {
+  width: 41%; }
+
+.col-pull-41 {
+  margin-left: 41% !important; }
+
+.col-42 {
+  width: 42%; }
+
+.col-pull-42 {
+  margin-left: 42% !important; }
+
+.col-43 {
+  width: 43%; }
+
+.col-pull-43 {
+  margin-left: 43% !important; }
+
+.col-44 {
+  width: 44%; }
+
+.col-pull-44 {
+  margin-left: 44% !important; }
+
+.col-45 {
+  width: 45%; }
+
+.col-pull-45 {
+  margin-left: 45% !important; }
+
+.col-46 {
+  width: 46%; }
+
+.col-pull-46 {
+  margin-left: 46% !important; }
+
+.col-47 {
+  width: 47%; }
+
+.col-pull-47 {
+  margin-left: 47% !important; }
+
+.col-48 {
+  width: 48%; }
+
+.col-pull-48 {
+  margin-left: 48% !important; }
+
+.col-49 {
+  width: 49%; }
+
+.col-pull-49 {
+  margin-left: 49% !important; }
+
+.col-50 {
+  width: 50%; }
+
+.col-pull-50 {
+  margin-left: 50% !important; }
+
+.col-51 {
+  width: 51%; }
+
+.col-pull-51 {
+  margin-left: 51% !important; }
+
+.col-52 {
+  width: 52%; }
+
+.col-pull-52 {
+  margin-left: 52% !important; }
+
+.col-53 {
+  width: 53%; }
+
+.col-pull-53 {
+  margin-left: 53% !important; }
+
+.col-54 {
+  width: 54%; }
+
+.col-pull-54 {
+  margin-left: 54% !important; }
+
+.col-55 {
+  width: 55%; }
+
+.col-pull-55 {
+  margin-left: 55% !important; }
+
+.col-56 {
+  width: 56%; }
+
+.col-pull-56 {
+  margin-left: 56% !important; }
+
+.col-57 {
+  width: 57%; }
+
+.col-pull-57 {
+  margin-left: 57% !important; }
+
+.col-58 {
+  width: 58%; }
+
+.col-pull-58 {
+  margin-left: 58% !important; }
+
+.col-59 {
+  width: 59%; }
+
+.col-pull-59 {
+  margin-left: 59% !important; }
+
+.col-60 {
+  width: 60%; }
+
+.col-pull-60 {
+  margin-left: 60% !important; }
+
+.col-61 {
+  width: 61%; }
+
+.col-pull-61 {
+  margin-left: 61% !important; }
+
+.col-62 {
+  width: 62%; }
+
+.col-pull-62 {
+  margin-left: 62% !important; }
+
+.col-63 {
+  width: 63%; }
+
+.col-pull-63 {
+  margin-left: 63% !important; }
+
+.col-64 {
+  width: 64%; }
+
+.col-pull-64 {
+  margin-left: 64% !important; }
+
+.col-65 {
+  width: 65%; }
+
+.col-pull-65 {
+  margin-left: 65% !important; }
+
+.col-66 {
+  width: 66%; }
+
+.col-pull-66 {
+  margin-left: 66% !important; }
+
+.col-67 {
+  width: 67%; }
+
+.col-pull-67 {
+  margin-left: 67% !important; }
+
+.col-68 {
+  width: 68%; }
+
+.col-pull-68 {
+  margin-left: 68% !important; }
+
+.col-69 {
+  width: 69%; }
+
+.col-pull-69 {
+  margin-left: 69% !important; }
+
+.col-70 {
+  width: 70%; }
+
+.col-pull-70 {
+  margin-left: 70% !important; }
+
+.col-71 {
+  width: 71%; }
+
+.col-pull-71 {
+  margin-left: 71% !important; }
+
+.col-72 {
+  width: 72%; }
+
+.col-pull-72 {
+  margin-left: 72% !important; }
+
+.col-73 {
+  width: 73%; }
+
+.col-pull-73 {
+  margin-left: 73% !important; }
+
+.col-74 {
+  width: 74%; }
+
+.col-pull-74 {
+  margin-left: 74% !important; }
+
+.col-75 {
+  width: 75%; }
+
+.col-pull-75 {
+  margin-left: 75% !important; }
+
+.col-76 {
+  width: 76%; }
+
+.col-pull-76 {
+  margin-left: 76% !important; }
+
+.col-77 {
+  width: 77%; }
+
+.col-pull-77 {
+  margin-left: 77% !important; }
+
+.col-78 {
+  width: 78%; }
+
+.col-pull-78 {
+  margin-left: 78% !important; }
+
+.col-79 {
+  width: 79%; }
+
+.col-pull-79 {
+  margin-left: 79% !important; }
+
+.col-80 {
+  width: 80%; }
+
+.col-pull-80 {
+  margin-left: 80% !important; }
+
+.col-81 {
+  width: 81%; }
+
+.col-pull-81 {
+  margin-left: 81% !important; }
+
+.col-82 {
+  width: 82%; }
+
+.col-pull-82 {
+  margin-left: 82% !important; }
+
+.col-83 {
+  width: 83%; }
+
+.col-pull-83 {
+  margin-left: 83% !important; }
+
+.col-84 {
+  width: 84%; }
+
+.col-pull-84 {
+  margin-left: 84% !important; }
+
+.col-85 {
+  width: 85%; }
+
+.col-pull-85 {
+  margin-left: 85% !important; }
+
+.col-86 {
+  width: 86%; }
+
+.col-pull-86 {
+  margin-left: 86% !important; }
+
+.col-87 {
+  width: 87%; }
+
+.col-pull-87 {
+  margin-left: 87% !important; }
+
+.col-88 {
+  width: 88%; }
+
+.col-pull-88 {
+  margin-left: 88% !important; }
+
+.col-89 {
+  width: 89%; }
+
+.col-pull-89 {
+  margin-left: 89% !important; }
+
+.col-90 {
+  width: 90%; }
+
+.col-pull-90 {
+  margin-left: 90% !important; }
+
+.col-91 {
+  width: 91%; }
+
+.col-pull-91 {
+  margin-left: 91% !important; }
+
+.col-92 {
+  width: 92%; }
+
+.col-pull-92 {
+  margin-left: 92% !important; }
+
+.col-93 {
+  width: 93%; }
+
+.col-pull-93 {
+  margin-left: 93% !important; }
+
+.col-94 {
+  width: 94%; }
+
+.col-pull-94 {
+  margin-left: 94% !important; }
+
+.col-95 {
+  width: 95%; }
+
+.col-pull-95 {
+  margin-left: 95% !important; }
+
+.col-96 {
+  width: 96%; }
+
+.col-pull-96 {
+  margin-left: 96% !important; }
+
+.col-97 {
+  width: 97%; }
+
+.col-pull-97 {
+  margin-left: 97% !important; }
+
+.col-98 {
+  width: 98%; }
+
+.col-pull-98 {
+  margin-left: 98% !important; }
+
+.col-99 {
+  width: 99%; }
+
+.col-pull-99 {
+  margin-left: 99% !important; }
+
+.col-100 {
+  width: 100%; }
+
+.col-pull-100 {
+  margin-left: 100% !important; }
+
+@media all and (max-width: 720px) {
+  .small_col-1 {
+    width: 1%; }
+  .small_col-pull-1 {
+    margin-left: 1% !important; }
+  .small_col-2 {
+    width: 2%; }
+  .small_col-pull-2 {
+    margin-left: 2% !important; }
+  .small_col-3 {
+    width: 3%; }
+  .small_col-pull-3 {
+    margin-left: 3% !important; }
+  .small_col-4 {
+    width: 4%; }
+  .small_col-pull-4 {
+    margin-left: 4% !important; }
+  .small_col-5 {
+    width: 5%; }
+  .small_col-pull-5 {
+    margin-left: 5% !important; }
+  .small_col-6 {
+    width: 6%; }
+  .small_col-pull-6 {
+    margin-left: 6% !important; }
+  .small_col-7 {
+    width: 7%; }
+  .small_col-pull-7 {
+    margin-left: 7% !important; }
+  .small_col-8 {
+    width: 8%; }
+  .small_col-pull-8 {
+    margin-left: 8% !important; }
+  .small_col-9 {
+    width: 9%; }
+  .small_col-pull-9 {
+    margin-left: 9% !important; }
+  .small_col-10 {
+    width: 10%; }
+  .small_col-pull-10 {
+    margin-left: 10% !important; }
+  .small_col-11 {
+    width: 11%; }
+  .small_col-pull-11 {
+    margin-left: 11% !important; }
+  .small_col-12 {
+    width: 12%; }
+  .small_col-pull-12 {
+    margin-left: 12% !important; }
+  .small_col-13 {
+    width: 13%; }
+  .small_col-pull-13 {
+    margin-left: 13% !important; }
+  .small_col-14 {
+    width: 14%; }
+  .small_col-pull-14 {
+    margin-left: 14% !important; }
+  .small_col-15 {
+    width: 15%; }
+  .small_col-pull-15 {
+    margin-left: 15% !important; }
+  .small_col-16 {
+    width: 16%; }
+  .small_col-pull-16 {
+    margin-left: 16% !important; }
+  .small_col-17 {
+    width: 17%; }
+  .small_col-pull-17 {
+    margin-left: 17% !important; }
+  .small_col-18 {
+    width: 18%; }
+  .small_col-pull-18 {
+    margin-left: 18% !important; }
+  .small_col-19 {
+    width: 19%; }
+  .small_col-pull-19 {
+    margin-left: 19% !important; }
+  .small_col-20 {
+    width: 20%; }
+  .small_col-pull-20 {
+    margin-left: 20% !important; }
+  .small_col-21 {
+    width: 21%; }
+  .small_col-pull-21 {
+    margin-left: 21% !important; }
+  .small_col-22 {
+    width: 22%; }
+  .small_col-pull-22 {
+    margin-left: 22% !important; }
+  .small_col-23 {
+    width: 23%; }
+  .small_col-pull-23 {
+    margin-left: 23% !important; }
+  .small_col-24 {
+    width: 24%; }
+  .small_col-pull-24 {
+    margin-left: 24% !important; }
+  .small_col-25 {
+    width: 25%; }
+  .small_col-pull-25 {
+    margin-left: 25% !important; }
+  .small_col-26 {
+    width: 26%; }
+  .small_col-pull-26 {
+    margin-left: 26% !important; }
+  .small_col-27 {
+    width: 27%; }
+  .small_col-pull-27 {
+    margin-left: 27% !important; }
+  .small_col-28 {
+    width: 28%; }
+  .small_col-pull-28 {
+    margin-left: 28% !important; }
+  .small_col-29 {
+    width: 29%; }
+  .small_col-pull-29 {
+    margin-left: 29% !important; }
+  .small_col-30 {
+    width: 30%; }
+  .small_col-pull-30 {
+    margin-left: 30% !important; }
+  .small_col-31 {
+    width: 31%; }
+  .small_col-pull-31 {
+    margin-left: 31% !important; }
+  .small_col-32 {
+    width: 32%; }
+  .small_col-pull-32 {
+    margin-left: 32% !important; }
+  .small_col-33 {
+    width: 33%; }
+  .small_col-pull-33 {
+    margin-left: 33% !important; }
+  .small_col-34 {
+    width: 34%; }
+  .small_col-pull-34 {
+    margin-left: 34% !important; }
+  .small_col-35 {
+    width: 35%; }
+  .small_col-pull-35 {
+    margin-left: 35% !important; }
+  .small_col-36 {
+    width: 36%; }
+  .small_col-pull-36 {
+    margin-left: 36% !important; }
+  .small_col-37 {
+    width: 37%; }
+  .small_col-pull-37 {
+    margin-left: 37% !important; }
+  .small_col-38 {
+    width: 38%; }
+  .small_col-pull-38 {
+    margin-left: 38% !important; }
+  .small_col-39 {
+    width: 39%; }
+  .small_col-pull-39 {
+    margin-left: 39% !important; }
+  .small_col-40 {
+    width: 40%; }
+  .small_col-pull-40 {
+    margin-left: 40% !important; }
+  .small_col-41 {
+    width: 41%; }
+  .small_col-pull-41 {
+    margin-left: 41% !important; }
+  .small_col-42 {
+    width: 42%; }
+  .small_col-pull-42 {
+    margin-left: 42% !important; }
+  .small_col-43 {
+    width: 43%; }
+  .small_col-pull-43 {
+    margin-left: 43% !important; }
+  .small_col-44 {
+    width: 44%; }
+  .small_col-pull-44 {
+    margin-left: 44% !important; }
+  .small_col-45 {
+    width: 45%; }
+  .small_col-pull-45 {
+    margin-left: 45% !important; }
+  .small_col-46 {
+    width: 46%; }
+  .small_col-pull-46 {
+    margin-left: 46% !important; }
+  .small_col-47 {
+    width: 47%; }
+  .small_col-pull-47 {
+    margin-left: 47% !important; }
+  .small_col-48 {
+    width: 48%; }
+  .small_col-pull-48 {
+    margin-left: 48% !important; }
+  .small_col-49 {
+    width: 49%; }
+  .small_col-pull-49 {
+    margin-left: 49% !important; }
+  .small_col-50 {
+    width: 50%; }
+  .small_col-pull-50 {
+    margin-left: 50% !important; }
+  .small_col-51 {
+    width: 51%; }
+  .small_col-pull-51 {
+    margin-left: 51% !important; }
+  .small_col-52 {
+    width: 52%; }
+  .small_col-pull-52 {
+    margin-left: 52% !important; }
+  .small_col-53 {
+    width: 53%; }
+  .small_col-pull-53 {
+    margin-left: 53% !important; }
+  .small_col-54 {
+    width: 54%; }
+  .small_col-pull-54 {
+    margin-left: 54% !important; }
+  .small_col-55 {
+    width: 55%; }
+  .small_col-pull-55 {
+    margin-left: 55% !important; }
+  .small_col-56 {
+    width: 56%; }
+  .small_col-pull-56 {
+    margin-left: 56% !important; }
+  .small_col-57 {
+    width: 57%; }
+  .small_col-pull-57 {
+    margin-left: 57% !important; }
+  .small_col-58 {
+    width: 58%; }
+  .small_col-pull-58 {
+    margin-left: 58% !important; }
+  .small_col-59 {
+    width: 59%; }
+  .small_col-pull-59 {
+    margin-left: 59% !important; }
+  .small_col-60 {
+    width: 60%; }
+  .small_col-pull-60 {
+    margin-left: 60% !important; }
+  .small_col-61 {
+    width: 61%; }
+  .small_col-pull-61 {
+    margin-left: 61% !important; }
+  .small_col-62 {
+    width: 62%; }
+  .small_col-pull-62 {
+    margin-left: 62% !important; }
+  .small_col-63 {
+    width: 63%; }
+  .small_col-pull-63 {
+    margin-left: 63% !important; }
+  .small_col-64 {
+    width: 64%; }
+  .small_col-pull-64 {
+    margin-left: 64% !important; }
+  .small_col-65 {
+    width: 65%; }
+  .small_col-pull-65 {
+    margin-left: 65% !important; }
+  .small_col-66 {
+    width: 66%; }
+  .small_col-pull-66 {
+    margin-left: 66% !important; }
+  .small_col-67 {
+    width: 67%; }
+  .small_col-pull-67 {
+    margin-left: 67% !important; }
+  .small_col-68 {
+    width: 68%; }
+  .small_col-pull-68 {
+    margin-left: 68% !important; }
+  .small_col-69 {
+    width: 69%; }
+  .small_col-pull-69 {
+    margin-left: 69% !important; }
+  .small_col-70 {
+    width: 70%; }
+  .small_col-pull-70 {
+    margin-left: 70% !important; }
+  .small_col-71 {
+    width: 71%; }
+  .small_col-pull-71 {
+    margin-left: 71% !important; }
+  .small_col-72 {
+    width: 72%; }
+  .small_col-pull-72 {
+    margin-left: 72% !important; }
+  .small_col-73 {
+    width: 73%; }
+  .small_col-pull-73 {
+    margin-left: 73% !important; }
+  .small_col-74 {
+    width: 74%; }
+  .small_col-pull-74 {
+    margin-left: 74% !important; }
+  .small_col-75 {
+    width: 75%; }
+  .small_col-pull-75 {
+    margin-left: 75% !important; }
+  .small_col-76 {
+    width: 76%; }
+  .small_col-pull-76 {
+    margin-left: 76% !important; }
+  .small_col-77 {
+    width: 77%; }
+  .small_col-pull-77 {
+    margin-left: 77% !important; }
+  .small_col-78 {
+    width: 78%; }
+  .small_col-pull-78 {
+    margin-left: 78% !important; }
+  .small_col-79 {
+    width: 79%; }
+  .small_col-pull-79 {
+    margin-left: 79% !important; }
+  .small_col-80 {
+    width: 80%; }
+  .small_col-pull-80 {
+    margin-left: 80% !important; }
+  .small_col-81 {
+    width: 81%; }
+  .small_col-pull-81 {
+    margin-left: 81% !important; }
+  .small_col-82 {
+    width: 82%; }
+  .small_col-pull-82 {
+    margin-left: 82% !important; }
+  .small_col-83 {
+    width: 83%; }
+  .small_col-pull-83 {
+    margin-left: 83% !important; }
+  .small_col-84 {
+    width: 84%; }
+  .small_col-pull-84 {
+    margin-left: 84% !important; }
+  .small_col-85 {
+    width: 85%; }
+  .small_col-pull-85 {
+    margin-left: 85% !important; }
+  .small_col-86 {
+    width: 86%; }
+  .small_col-pull-86 {
+    margin-left: 86% !important; }
+  .small_col-87 {
+    width: 87%; }
+  .small_col-pull-87 {
+    margin-left: 87% !important; }
+  .small_col-88 {
+    width: 88%; }
+  .small_col-pull-88 {
+    margin-left: 88% !important; }
+  .small_col-89 {
+    width: 89%; }
+  .small_col-pull-89 {
+    margin-left: 89% !important; }
+  .small_col-90 {
+    width: 90%; }
+  .small_col-pull-90 {
+    margin-left: 90% !important; }
+  .small_col-91 {
+    width: 91%; }
+  .small_col-pull-91 {
+    margin-left: 91% !important; }
+  .small_col-92 {
+    width: 92%; }
+  .small_col-pull-92 {
+    margin-left: 92% !important; }
+  .small_col-93 {
+    width: 93%; }
+  .small_col-pull-93 {
+    margin-left: 93% !important; }
+  .small_col-94 {
+    width: 94%; }
+  .small_col-pull-94 {
+    margin-left: 94% !important; }
+  .small_col-95 {
+    width: 95%; }
+  .small_col-pull-95 {
+    margin-left: 95% !important; }
+  .small_col-96 {
+    width: 96%; }
+  .small_col-pull-96 {
+    margin-left: 96% !important; }
+  .small_col-97 {
+    width: 97%; }
+  .small_col-pull-97 {
+    margin-left: 97% !important; }
+  .small_col-98 {
+    width: 98%; }
+  .small_col-pull-98 {
+    margin-left: 98% !important; }
+  .small_col-99 {
+    width: 99%; }
+  .small_col-pull-99 {
+    margin-left: 99% !important; }
+  .small_col-100 {
+    width: 100%; }
+  .small_col-pull-100 {
+    margin-left: 100% !important; } }
+
+.table {
+  position: relative;
+  margin: 0 auto;
+  width: 542px; }
+  .table .table__column, .table .table__row {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    .table .table__column div, .table .table__row div {
+      position: relative;
+      display: inline-block;
+      box-sizing: border-box; }
+  .table .col__label, .table .row__label {
+    font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #888888;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle; }
+  .table .table__column {
+    margin-bottom: 11px; }
+    .table .table__column .col__label {
+      padding-left: 3px; }
+      .table .table__column .col__label:first-child {
+        left: 11px; }
+      .table .table__column .col__label:last-child {
+        left: 5px; }
+  .table .table__row {
+    text-align: right;
+    border-bottom: 1px solid #e0e0e0; }
+    .table .table__row.line__top {
+      border-top: 1px solid #c8c8c8; }
+    .table .table__row.line__bottom {
+      border-bottom: 1px solid #c8c8c8; }
+    .table .table__row .row__label {
+      text-align: left;
+      top: -4px;
+      left: -2px; }
+    .table .table__row .row__data {
+      font-family: "Myriad-pro-n3", "myriad-pro","Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      background-color: #f8f7f2;
+      border-left: 1px solid white;
+      text-align: center;
+      padding-top: 13px;
+      padding-left: 2px;
+      top: -1px;
+      margin-left: -5px;
+      min-height: 50px; }
+
+.always__on__top {
+  z-index: 1000; }
+
+.no__wrap {
+  white-space: nowrap; }
+
+.inline__block {
+  display: inline-block; }
+
+.icon_video_play {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAADJklEQVRYw73YTWwWVRQG4KdD1RjTEmNjt0ZNtC4GXQiiTLAmklShdKFbomAYSQTqRjbu3IhuBBd2iPizM42Jjb9JF/7kolgIQWcBGuLCJVhi2iYSNRUXc1vqZ03nm6/1LGfuOee9d+697/tOlzYiK8qNeAwbcRduwXrM4DJ+xCl8GvL0VN26XTUa34jdOIh5fIwTOIdLIU9nsqJcj1sxgAzb0Y0jOB7y9EpjEFlR7oyFzuLVkKfftLFqm/EC7sNoyNOJtkBkRXkDjuIR7A15+kXd5svUGsQxfI4DIU9/XxFEVpS9mMCveDrk6WxTAC0138bNGGmt2dUy+Hp8hp+Qhzy92imAJbXXYQy3Yyjk6R8L75KWsa9jDvtWEwCEPJ3Hs5iNfRZjEURWlCMYxK6YsOoR6+7CYOyH+DniMTyv2gONN2HdyIryYbyDgZCnVxZWYje+/z8AxBX5Et9hD9c+x0EcbnM2R7Oi7O4Ay2EcgCQryk34q52LKMZ+TGZF2ddwNU5iPivKTQm24cOGsxnE6awoNzTM/wjbEjyg4oKmcRu+zoryiQa5J7A5UZHO+Q5AwE0Yz4rypawokzbyzuHuREXHFzsEQXXcX8REvKbrxCX0JehdDX5YEjvwbp2BsW9Pgtk2kNeJT/BUnYFZUfZgLlEpov5VaH4VL2M45OlMzZx+THerNuUALnQA4DfsCXn6Xpt59+CHBN9iSwcAfsaWBgDgIZxMMInhhgC+wv0hT882zB/GZBLydEp1fT/YZoExPBry9Jcm3aMGXRfydGqBgI7gEHbWLRLydF/D2S/EIZWOXWTRt7AhitI1j6gn7sXxRRDRF4yiiGd3LQH0qNT36IIfaRW6x9CHJ9dC4kWxO47LIU/3LjxvJZvnIog3sqJc0Z01ADCmcmr7l777B4gow7fjTry/Wtd5rDOOO/B4qwH6F+1GUhnCNM5kRbm1QwBbcSbWG1qOLFfyoiN4TeVFX4mSrG7zpV70+ZCnH/zX2Lqu/BmVGP5TJcmCinMuhjydizu+3zVXvgPXqe6fNzty5csAav0/0YdelauaVv2fOK2yklN1XdzfdfIarq20xZsAAAAASUVORK5CYII=");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 23px; }
+
+.section {
+  margin-top: 254px; }
+
+.wd__content {
+  margin-top: 88px; }
+  .wd__content .content__title {
+    font-size: 48px;
+    max-width: 82%; }
+  .wd__content .content__info {
+    font-size: 20px;
+    max-width: 86%;
+    margin-top: 32px;
+    margin-left: 3px; }
+  .wd__content .content__link {
+    font-size: 1.365em; }
+
+.large_use, .medium_use, .small_use {
+  display: none; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.3em !important; }
+
+.wd__spec__list {
+  vertical-align: top; }
+  .wd__spec__list .wd__spec {
+    display: inline-block !important;
+    position: relative;
+    height: 182px;
+    width: 184px;
+    margin-right: 5px;
+    margin-bottom: 32px;
+    margin-left: 5px;
+    overflow: hidden; }
+  .wd__spec__list .spec__detail {
+    font-size: 54px;
+    height: 182px;
+    width: 184px;
+    padding-bottom: 9px;
+    color: #a89d5b;
+    display: table-cell;
+    vertical-align: middle; }
+    .wd__spec__list .spec__detail span {
+      font-size: 33px;
+      padding: 0 0 0 4px;
+      padding-right: none;
+      padding-left: none; }
+  .wd__spec__list .spec_dis_top {
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    margin-top: -3px;
+    padding-bottom: 0px;
+    display: block; }
+  .wd__spec__list .spec_dis {
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    letter-spacing: 2px;
+    bottom: 11px;
+    padding-bottom: 0px;
+    display: block; }
+
+._remove_margin_top {
+  margin-top: 0 !important; }
+
+#section__intro {
+  position: relative;
+  height: 830px;
+  background-color: #f4f4f4;
+  overflow: hidden; }
+  #section__intro .wd__content {
+    margin: 56px 0px 150px 100px; }
+    #section__intro .wd__content .content__slogan {
+      font-size: 43px;
+      margin-left: -1px; }
+    #section__intro .wd__content .content__title {
+      font-size: 65px;
+      width: 610px;
+      max-width: 610px;
+      margin-top: 5px;
+      margin-left: 2px;
+      line-height: 75px; }
+    #section__intro .wd__content .content__info {
+      font-size: 26px;
+      width: 82%;
+      margin-top: 35px;
+      margin-bottom: 128px;
+      margin-left: 2px;
+      line-height: 1.55;
+      letter-spacing: 0px; }
+  #section__intro .intro__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 798px;
+    width: 2236px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/intro_phone.png");
+    background-position: center;
+    margin-left: -1168px;
+    margin-top: -59px;
+    position: relative; }
+  #section__intro .ellipse {
+    background: transparent no-repeat scroll center top;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/ellipse.png");
+    height: 0px;
+    position: absolute;
+    z-index: 8;
+    bottom: 0px;
+    width: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    left: 0px;
+    padding-bottom: 8.125%; }
+
+#section__boost__master {
+  margin-top: 67px; }
+  #section__boost__master .boost__master__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    z-index: 0;
+    background-size: contain;
+    height: 67px;
+    width: 779px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/boostmaster_zentenna_logo.jpg");
+    background-position: center;
+    margin: 0 0 0 290px;
+    position: relative; }
+  #section__boost__master .wd__spec__list {
+    vertical-align: top;
+    margin-top: 88px;
+    margin-left: 0px; }
+    #section__boost__master .wd__spec__list .wd__spec {
+      display: inline-block !important;
+      position: relative;
+      margin-right: 13px;
+      margin-left: 13px;
+      overflow: hidden; }
+    #section__boost__master .wd__spec__list .spec__detail {
+      color: #a89d5b;
+      display: table-cell;
+      vertical-align: middle; }
+      #section__boost__master .wd__spec__list .spec__detail span {
+        font-size: none;
+        padding: none;
+        padding-right: none;
+        padding-left: none; }
+    #section__boost__master .wd__spec__list .spec_dis_top {
+      position: absolute;
+      letter-spacing: 1.6px;
+      padding-bottom: 0px;
+      display: block; }
+    #section__boost__master .wd__spec__list .spec_dis {
+      position: absolute;
+      padding-bottom: 0px;
+      display: block; }
+    #section__boost__master .wd__spec__list .wd__spec span {
+      padding-left: 2px; }
+
+#section__fast__charge {
+  margin-top: 217px; }
+  #section__fast__charge .wd__content {
+    margin-top: 79px;
+    margin-bottom: 48px;
+    margin-left: 32px; }
+    #section__fast__charge .wd__content .content__info {
+      text-align: left;
+      width: 84%;
+      max-width: 84%;
+      margin-top: 28px;
+      margin-left: 0px; }
+  #section__fast__charge .wd__feature__list {
+    margin-left: 29px; }
+    #section__fast__charge .wd__feature__list .wd__feature .wd__feature__data {
+      margin-bottom: 11px; }
+      #section__fast__charge .wd__feature__list .wd__feature .wd__feature__data span {
+        padding-left: 2px; }
+    #section__fast__charge .wd__feature__list .feature__charging-0-60 {
+      margin-left: 54px; }
+    #section__fast__charge .wd__feature__list .feature__capacity {
+      margin-left: 56px; }
+  #section__fast__charge .table {
+    margin-top: 55px;
+    margin-left: 33px;
+    width: 646px; }
+    #section__fast__charge .table .table__column {
+      margin-bottom: 8px; }
+    #section__fast__charge .table .table__row .row__label {
+      top: -6px;
+      left: -1px; }
+    #section__fast__charge .table .offset__right {
+      padding-right: 7px; }
+  #section__fast__charge .fast__charge__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 1032px;
+    width: 370px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/boostmaster_zentenna_phone.jpg");
+    background-position: center;
+    margin: -638px 0 0 120px;
+    position: relative; }
+
+#section__more__talking {
+  margin-top: 0px; }
+  #section__more__talking .wd__content {
+    margin-top: 201px;
+    margin-bottom: 49px;
+    margin-left: 19px; }
+    #section__more__talking .wd__content .content__info {
+      text-align: left;
+      width: 71%;
+      max-width: 71%;
+      margin-top: 28px;
+      margin-left: 0px; }
+  #section__more__talking .wd__feature__list {
+    margin-left: 13px; }
+  #section__more__talking .feature__louder .wd__feature__discribe {
+    padding-left: 8px; }
+  #section__more__talking .feature__louder span {
+    padding-left: 2px; }
+  #section__more__talking .feature__less__distortion {
+    margin-left: 53px; }
+    #section__more__talking .feature__less__distortion .wd__feature__data span {
+      padding-left: 2px; }
+    #section__more__talking .feature__less__distortion .wd__feature__discribe {
+      padding-left: 0px; }
+  #section__more__talking .plug__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    z-index: 9;
+    background-size: cover;
+    height: 190px;
+    width: 190px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/more_talking_adapter.jpg");
+    background-position: center;
+    margin: 63px 0 0 20px;
+    position: relative; }
+  #section__more__talking .wording__plug {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    font-weight: 300;
+    position: absolute;
+    top: 69px;
+    left: 211px;
+    font-size: 18px;
+    width: 95px;
+    line-height: 24px; }
+  #section__more__talking .more__talking__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    z-index: -9;
+    background-size: cover;
+    height: 875px;
+    width: 100%;
+    max-width: 2424px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/more_talking.jpg");
+    background-position: center;
+    margin: -765px auto 0 auto;
+    position: relative; }
+
+#section__traiblazing {
+  margin-top: 248px; }
+  #section__traiblazing .content__logo {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 58px;
+    width: 100%;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/boostmaster_logo.jpg");
+    background-position: center;
+    margin: 0 auto;
+    position: relative; }
+  #section__traiblazing .wd__content {
+    margin-top: 0px; }
+    #section__traiblazing .wd__content .content__title {
+      text-align: center;
+      margin: 33px auto 0 auto; }
+    #section__traiblazing .wd__content .content__info {
+      text-align: center;
+      width: 820px;
+      max-width: 820px;
+      margin: 28px auto 0 auto; }
+  #section__traiblazing .traiblazing__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 682px;
+    width: 976px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/boostmaster_info.jpg");
+    background-position: center;
+    margin: 37px auto 0 auto;
+    position: relative; }
+  #section__traiblazing .traiblazing__img .traiblazing__negative,
+  #section__traiblazing .traiblazing__img .traiblazing__electrolyte,
+  #section__traiblazing .traiblazing__img .traiblazing__positive {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    font-weight: 300;
+    position: absolute;
+    top: 549px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    width: 142px;
+    text-align: center;
+    line-height: 25px; }
+  #section__traiblazing .traiblazing__img .traiblazing__negative {
+    left: 102px; }
+  #section__traiblazing .traiblazing__img .traiblazing__electrolyte {
+    left: 417px; }
+  #section__traiblazing .traiblazing__img .traiblazing__positive {
+    left: 732px; }
+
+#section__speed__up {
+  margin-top: 64px; }
+  #section__speed__up .wd__feature__list {
+    text-align: center;
+    margin-top: 56px;
+    padding-left: 23px; }
+    #section__speed__up .wd__feature__list .wd__feature .wd__feature__discribe__top {
+      text-align: left;
+      padding-left: 4px; }
+    #section__speed__up .wd__feature__list .wd__feature .wd__feature__data {
+      font-size: 64px;
+      margin-top: -3px;
+      padding-left: 1px; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__data span {
+        padding-left: 2px; }
+    #section__speed__up .wd__feature__list .wd__feature .wd__feature__discribe {
+      text-align: left;
+      padding-left: 4px; }
+  #section__speed__up .wd__content {
+    text-align: center; }
+    #section__speed__up .wd__content .content__title {
+      margin: 0 auto; }
+    #section__speed__up .wd__content .content__info {
+      width: 56%;
+      margin: 0 auto;
+      margin-top: 27px; }
+  #section__speed__up .speed__up__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 374px;
+    width: 1189px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/speed_up_phone.jpg");
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 57px;
+    position: relative; }
+
+#section__ultrafast__wifi .wd__feature__list {
+  width: 80%;
+  margin-top: 51px;
+  margin-left: 81px; }
+  #section__ultrafast__wifi .wd__feature__list .wd__feature {
+    margin-right: 54px;
+    margin-bottom: 57px; }
+    #section__ultrafast__wifi .wd__feature__list .wd__feature .wd__feature__discribe {
+      margin-top: -21px;
+      margin-left: -2px; }
+    #section__ultrafast__wifi .wd__feature__list .wd__feature .wd__feature__data span {
+      padding-left: 2px; }
+  #section__ultrafast__wifi .wd__feature__list .feature__wlan .wd__feature__data span {
+    padding-left: 0; }
+  #section__ultrafast__wifi .wd__feature__list .feature__wlan .wd__feature__discribe {
+    margin-top: -23px;
+    margin-left: -1px; }
+  #section__ultrafast__wifi .wd__feature__list .feature__speed {
+    margin-top: -2px;
+    margin-left: 2px; }
+    #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__discribe__top, #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__discribe {
+      padding-left: 1px; }
+    #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__data {
+      margin-top: -4px; }
+  #section__ultrafast__wifi .wd__feature__list .feature__bandwidth {
+    margin-top: 18px;
+    margin-left: 30px; }
+    #section__ultrafast__wifi .wd__feature__list .feature__bandwidth .wd__feature__data {
+      margin-left: 1px;
+      margin-top: -2px; }
+
+#section__ultrafast__wifi .wd__content {
+  margin-top: 166px;
+  margin-left: 82px; }
+  #section__ultrafast__wifi .wd__content .content__info {
+    width: 83%;
+    margin-top: 27px; }
+  #section__ultrafast__wifi .wd__content .content__comment {
+    margin-top: 14px;
+    margin-left: 1px; }
+
+#section__ultrafast__wifi .ultrafast__wifi__img {
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-size: contain;
+  height: 1155px;
+  width: 861px;
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/3x_ultrafast_phone.jpg");
+  background-position: center;
+  margin: 0 auto;
+  margin-left: -884px;
+  margin-top: -94px;
+  position: relative; }
+
+#section__work__anywhere {
+  margin-top: 8px; }
+  #section__work__anywhere .wd__content {
+    text-align: center; }
+    #section__work__anywhere .wd__content .content__title {
+      margin: 0 auto; }
+    #section__work__anywhere .wd__content .content__info {
+      width: 54%;
+      margin: 0 auto;
+      margin-top: 27px; }
+  #section__work__anywhere .work__anywhere__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 558px;
+    width: 1366px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/work-anywhere.jpg");
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 75px;
+    position: relative; }
+
+#section__four__antennas {
+  margin-top: 201px; }
+  #section__four__antennas .wd__content {
+    margin-top: 0; }
+    #section__four__antennas .wd__content .content__title {
+      text-align: center;
+      margin: 34px auto 0 auto; }
+    #section__four__antennas .wd__content .content__info {
+      text-align: center;
+      width: 820px;
+      max-width: 820px;
+      margin: 28px auto 0 auto; }
+  #section__four__antennas .four__antennas__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 420px;
+    width: 1366px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/four_laser-engraved.jpg");
+    background-position: center;
+    margin: 76px auto 0 auto;
+    position: relative; }
+  #section__four__antennas .wording__aux,
+  #section__four__antennas .wording__wifi,
+  #section__four__antennas .wording__main,
+  #section__four__antennas .wording__gps {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    font-weight: 300;
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    width: 142px;
+    text-align: left;
+    line-height: 20px; }
+  #section__four__antennas .wording__aux {
+    top: 87px;
+    left: 141px;
+    width: 40px; }
+  #section__four__antennas .wording__wifi {
+    top: 133px;
+    right: 140px;
+    width: 73px;
+    text-align: right; }
+  #section__four__antennas .wording__main {
+    top: 228px;
+    left: 141px; }
+  #section__four__antennas .wording__gps {
+    right: 140px;
+    width: 98px;
+    text-align: right;
+    top: 273px; }
+
+#section__omnidirectional {
+  margin-top: 238px; }
+  #section__omnidirectional .omnidirectional__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 823px;
+    width: 100%;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/omnidirectional_antennas.jpg");
+    background-position: center;
+    margin: 76px auto;
+    position: relative; }
+  #section__omnidirectional .wd__content {
+    margin: 0 auto; }
+    #section__omnidirectional .wd__content .content__title {
+      text-align: center;
+      margin: 0 auto; }
+    #section__omnidirectional .wd__content .content__info {
+      text-align: center;
+      width: 72%;
+      margin: 27px auto 0; }
+  #section__omnidirectional .wd__feature__list {
+    text-align: center;
+    margin-top: 47px; }
+    #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__data span {
+      padding-left: 2px; }
+    #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__discribe {
+      margin-top: -18px; }
+  #section__omnidirectional .wd__feature .wd__feature__data span {
+    padding-left: 2px; }
+  #section__omnidirectional .wording__single {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.3px;
+    position: absolute;
+    top: 644px;
+    left: 325px;
+    text-align: center; }
+  #section__omnidirectional .wording__dual {
+    font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.3px;
+    position: absolute;
+    top: 644px;
+    left: 983px;
+    width: 150px;
+    line-height: 25px;
+    text-align: center; }
+
+#section__satellite__navigation {
+  margin-top: 159px; }
+  #section__satellite__navigation .satellite__navigation__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 755px;
+    width: 100%;
+    max-width: 2424px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/five_satellite.jpg");
+    background-position: center;
+    margin: 55px auto 0;
+    position: relative; }
+  #section__satellite__navigation .wd__content {
+    margin: 0 auto; }
+    #section__satellite__navigation .wd__content .content__title {
+      text-align: center;
+      margin: 0 auto; }
+    #section__satellite__navigation .wd__content .content__info {
+      text-align: center;
+      width: 67%;
+      margin: 27px auto 0; }
+
+#section__pinpoint {
+  margin-top: 238px; }
+  #section__pinpoint .pinpoint__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 573px;
+    width: 942px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/pinpoint_satellite.jpg");
+    background-position: center;
+    margin: 0 auto;
+    position: relative; }
+  #section__pinpoint .wd__content {
+    margin: 0 auto; }
+    #section__pinpoint .wd__content .content__title {
+      text-align: center;
+      margin: 0 auto; }
+    #section__pinpoint .wd__content .content__info {
+      text-align: center;
+      width: 59%;
+      margin: 26px auto 77px auto; }
+
+#section__accurate {
+  margin-top: 147px; }
+  #section__accurate .wd__content {
+    margin-top: 166px;
+    margin-left: 67px; }
+    #section__accurate .wd__content .content__title {
+      width: 68%; }
+    #section__accurate .wd__content .content__info {
+      width: 77%;
+      margin-top: 27px;
+      margin-left: 1px;
+      padding-left: 0; }
+  #section__accurate .accurate__video__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 355px;
+    width: 478px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/video.jpg");
+    background-position: center;
+    margin-left: 68px;
+    margin-top: 29px;
+    position: relative; }
+  #section__accurate .accurate__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 949px;
+    width: 724px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/accurate_every_phone.jpg");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: -724px;
+    margin-top: 104px;
+    position: relative; }
+
+#section__next {
+  padding-top: 74px;
+  background-color: #f7f7f7;
+  margin-top: 184px; }
+  #section__next .wd__content {
+    margin-top: 31px;
+    margin-left: 192px; }
+    #section__next .wd__content .content__slogan {
+      font-size: 29px; }
+    #section__next .wd__content .content__title {
+      font-size: 40px;
+      max-width: 66%;
+      margin-top: 13px;
+      margin-left: 2px; }
+    #section__next .wd__content .content__link {
+      font-size: 20px;
+      margin-top: 19px;
+      margin-left: 2px; }
+  #section__next .next__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 460px;
+    width: 512px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/next_phone.png");
+    background-position: center;
+    margin-left: -24px;
+    margin-top: -12px;
+    position: relative; }
+
+@media all and (min-width: 1301px) {
+  .large_use {
+    display: inline; }
+  #section__intro .intro__img {
+    background-image: none; }
+  #section__intro .shadow__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 969px;
+    width: 2500px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/intro_phone_ani_bg.png");
+    background-position: center;
+    margin-left: -88px;
+    margin-top: 0;
+    position: absolute; }
+  #section__intro .phone__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 826px;
+    width: 919px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/intro_phone_ani.png");
+    background-position: center;
+    margin-left: 1120px;
+    margin-top: -227px;
+    position: absolute; }
+  @keyframes changeTopOpacity {
+    from {
+      top: 0;
+      opacity: 1; }
+    25% {
+      top: -10px; }
+    50% {
+      top: 0px;
+      opacity: .8; }
+    75% {
+      top: 10px; }
+    to {
+      opacity: 1;
+      top: 0; } }
+  #section__intro #shadow__img {
+    animation-duration: 3s;
+    animation-name: changeTopOpacity;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  #section__ultrafast__wifi .ultrafast__wifi__img {
+    background-image: none; }
+  #section__ultrafast__wifi .ripple__xs__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 597px;
+    width: 100%;
+    max-width: 431px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/3x_ultrafast_phone_ani_circle_0.png");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 355px;
+    margin-top: 249px;
+    position: absolute; }
+  #section__ultrafast__wifi .ripple__s__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 738px;
+    width: 100%;
+    max-width: 536px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/3x_ultrafast_phone_ani_circle_1.png");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 276px;
+    margin-top: 187px;
+    position: absolute; }
+  #section__ultrafast__wifi .ripple__m__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 918px;
+    width: 100%;
+    max-width: 673px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/3x_ultrafast_phone_ani_circle_2.png");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 162px;
+    margin-top: 105px;
+    position: absolute; }
+  #section__ultrafast__wifi .ripple__l__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 1155px;
+    width: 100%;
+    max-width: 861px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/3x_ultrafast_phone_ani_circle_3.png");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute; }
+  #section__ultrafast__wifi .phone__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 723px;
+    width: 100%;
+    max-width: 526px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/3x_ultrafast_phone_ani_phone.png");
+    background-position: center;
+    margin: 0 auto;
+    margin-left: 328px;
+    margin-top: 196px;
+    position: absolute; }
+  #section__four__antennas .four__antennas__img {
+    background-image: none; }
+  #section__four__antennas .phone__back__case__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 420px;
+    width: 840px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/four_laser-engraved_ani_full.jpg");
+    background-position: center;
+    margin-left: 262px;
+    margin-top: 2px;
+    position: absolute; }
+  #section__four__antennas .phone__back__component__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 420px;
+    width: 840px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/four_laser-engraved_ani_obj.jpg");
+    background-position: center;
+    margin-left: 262px;
+    margin-top: 2px;
+    position: absolute; }
+  #section__four__antennas .phone__back__line__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    display: block;
+    background-size: cover;
+    top: 137px;
+    height: 189px;
+    width: 100%;
+    max-width: 1084px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/large/animation/four_laser-engraved_ani_line.png");
+    background-position: center;
+    margin: 0 auto;
+    position: relative; } }
+
+@media all and (min-width: 721px) and (max-width: 1300px) {
+  .medium_use {
+    display: inline; }
+  .compare__img__design__tablet {
+    top: 269px;
+    display: none; }
+  .column {
+    width: 100%;
+    left: 0; }
+  .spec_dis_top {
+    letter-spacing: 1.67px; }
+  .wd__content {
+    margin-top: 0px !important;
+    margin-bottom: 41px; }
+    .wd__content .content__title {
+      font-size: 48px;
+      line-height: 1.2 !important; }
+    .wd__content .content__link {
+      line-height: 18px; }
+    .wd__content .content__comment {
+      margin-top: 16px !important; }
+  .medium__content__left .wd__content {
+    width: 90%;
+    margin-left: 5% !important; }
+    .medium__content__left .wd__content .content__title {
+      max-width: 800px !important; }
+    .medium__content__left .wd__content .content__info {
+      width: 100%;
+      max-width: 800px !important;
+      margin-top: 24px !important;
+      margin-left: 2px; }
+    .medium__content__left .wd__content .content__link {
+      font-size: 20px;
+      margin-top: 18px;
+      margin-left: 3px; }
+  .medium__content__center .wd__content {
+    text-align: center;
+    width: 90% !important;
+    margin-left: 5% !important; }
+    .medium__content__center .wd__content .content__title {
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto; }
+    .medium__content__center .wd__content .content__info {
+      text-align: center;
+      width: 100%;
+      max-width: 800px !important;
+      margin: 0 auto !important;
+      margin-top: 24px !important; }
+  #section__intro {
+    padding-top: 49px;
+    height: auto; }
+    #section__intro .wd__content {
+      margin-top: 2px !important;
+      margin-left: 66px; }
+      #section__intro .wd__content .content__slogan {
+        font-size: 43px; }
+      #section__intro .wd__content .content__title {
+        width: 96%;
+        max-width: 893px;
+        margin-top: 2px;
+        margin-left: -1px;
+        line-height: 77px !important; }
+      #section__intro .wd__content .content__info {
+        width: 75%;
+        max-width: 491px !important;
+        margin-top: 34px;
+        margin-left: -2px; }
+    #section__intro .wd__content .content__info {
+      z-index: 100; }
+    #section__intro .intro__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      z-index: 0;
+      background-size: cover;
+      height: 1131px;
+      width: 100%;
+      max-width: 1366px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/intro_phone_medium.png");
+      background-position: center;
+      margin: -554px auto -11px;
+      position: relative; }
+    #section__intro .ellipse {
+      background: transparent no-repeat scroll center top;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/ellipse.png");
+      height: 0px;
+      position: absolute;
+      z-index: 1;
+      bottom: 0px;
+      width: 100%;
+      background-size: cover;
+      background-position: center bottom;
+      left: 0px;
+      padding-bottom: 17.338%; }
+  #section__boost__master {
+    margin-top: 60px; }
+    #section__boost__master .wd__spec__list {
+      vertical-align: top;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 80px; }
+      #section__boost__master .wd__spec__list .wd__spec {
+        display: inline-block !important;
+        position: relative;
+        height: 183px;
+        width: 183px;
+        margin: 0;
+        margin-right: 5px;
+        margin-bottom: 29px;
+        margin-left: 5px;
+        overflow: hidden; }
+      #section__boost__master .wd__spec__list .spec__detail {
+        width: 183px;
+        color: #a89d5b;
+        display: table-cell;
+        vertical-align: middle; }
+        #section__boost__master .wd__spec__list .spec__detail span {
+          font-size: 32px;
+          padding: 0 0 0 2px;
+          padding-right: none;
+          padding-left: none; }
+      #section__boost__master .wd__spec__list .spec_dis_top {
+        position: absolute;
+        padding-bottom: 0px;
+        display: block; }
+      #section__boost__master .wd__spec__list .spec_dis {
+        position: absolute;
+        letter-spacing: 1.5px;
+        bottom: 13px;
+        padding-bottom: 0px;
+        display: block; }
+      #section__boost__master .wd__spec__list .spec__five__magnet {
+        padding-right: 0px !important; }
+        #section__boost__master .wd__spec__list .spec__five__magnet .spec_dis {
+          padding-right: 3px; }
+      #section__boost__master .wd__spec__list .spec__charging, #section__boost__master .wd__spec__list .spec__for__speaker {
+        margin-right: 13px;
+        margin-left: 13px; }
+    #section__boost__master .boost__master__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 163px;
+      width: 391px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/boostmaster_zentenna_logo__medium.png");
+      margin: 0 auto;
+      position: relative; }
+  #section__fast__charge {
+    margin-top: 98px; }
+    #section__fast__charge .wd__feature__list {
+      width: 721px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left; }
+      #section__fast__charge .wd__feature__list .wd__feature {
+        margin: 0; }
+        #section__fast__charge .wd__feature__list .wd__feature .wd__feature__data, #section__fast__charge .wd__feature__list .wd__feature .wd__feature__discribe {
+          text-align: left; }
+        #section__fast__charge .wd__feature__list .wd__feature .wd__feature__discribe {
+          margin-top: -20px; }
+      #section__fast__charge .wd__feature__list .feature__faster__charging {
+        margin-left: 82px; }
+      #section__fast__charge .wd__feature__list .feature__charging-0-60 {
+        margin-right: 33px;
+        margin-left: 37px; }
+    #section__fast__charge .table {
+      width: 651px;
+      margin: 0 auto;
+      margin-top: 46px; }
+      #section__fast__charge .table .col__single__magnet {
+        left: 15px; }
+      #section__fast__charge .table .col__flagship {
+        left: 6px; }
+      #section__fast__charge .table .row__label {
+        left: 5px !important; }
+    #section__fast__charge .wd__content {
+      margin-bottom: 35px; }
+      #section__fast__charge .wd__content .content__info {
+        text-align: center;
+        width: 93%;
+        max-width: 800px !important; }
+    #section__fast__charge .fast__charge__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 1033px;
+      width: 643px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/boostmaster_zentenna_phone__medium.jpg");
+      background-position: center;
+      margin: 0 auto;
+      margin-top: 67px;
+      position: relative; }
+  #section__more__talking {
+    margin-top: 126px; }
+    #section__more__talking .wd__content {
+      margin-bottom: 44px; }
+      #section__more__talking .wd__content .content__info {
+        text-align: center;
+        width: 89%;
+        max-width: 645px !important; }
+    #section__more__talking .wd__feature__list {
+      margin-left: -281px;
+      text-align: center; }
+      #section__more__talking .wd__feature__list .wd__feature__data {
+        text-align: center; }
+        #section__more__talking .wd__feature__list .wd__feature__data span {
+          padding-left: 2px; }
+      #section__more__talking .wd__feature__list .wd__feature__discribe {
+        text-align: center;
+        margin-top: -21px; }
+    #section__more__talking .feature__louder .wd__feature__discribe {
+      padding-left: 5px; }
+    #section__more__talking .wording__plug {
+      top: 34px;
+      left: 128px;
+      text-align: left; }
+    #section__more__talking .plug__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      right: -109px;
+      height: 112px;
+      width: 113px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/more_talking_adapter__medium.jpg");
+      margin: 0 auto;
+      margin-top: -94px;
+      position: relative; }
+    #section__more__talking .more__talking__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 587px;
+      width: 100%;
+      max-width: 1200px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/more_talking__medium.jpg");
+      margin: 0 auto;
+      margin-top: 45px;
+      position: relative; }
+  #section__traiblazing {
+    margin-top: 140px; }
+    #section__traiblazing .wd__content {
+      margin-bottom: 40px; }
+      #section__traiblazing .wd__content .content__title {
+        margin-top: 16px; }
+      #section__traiblazing .wd__content .content__info {
+        width: 86%;
+        max-width: 800px !important;
+        margin-top: 23px !important; }
+    #section__traiblazing .traiblazing__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 430px;
+      width: 640px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/boostmaster_info__medium.jpg");
+      margin: 0 auto;
+      position: relative; }
+    #section__traiblazing .traiblazing__img .traiblazing__negative, #section__traiblazing .traiblazing__img .traiblazing__electrolyte, #section__traiblazing .traiblazing__img .traiblazing__positive {
+      top: 356px;
+      letter-spacing: 0.4px; }
+    #section__traiblazing .traiblazing__img .traiblazing__negative {
+      left: 34px; }
+    #section__traiblazing .traiblazing__img .traiblazing__electrolyte {
+      left: 248px; }
+    #section__traiblazing .traiblazing__img .traiblazing__positive {
+      left: 467px; }
+  #section__speed__up {
+    margin-top: 101px; }
+    #section__speed__up .wd__feature__list {
+      margin-top: 46px;
+      padding-left: 17px; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__discribe__top {
+        padding-left: 9px; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__data {
+        padding-left: 2px; }
+        #section__speed__up .wd__feature__list .wd__feature .wd__feature__data span {
+          padding-left: 2px; }
+    #section__speed__up .wd__content .content__info {
+      width: 80%;
+      max-width: 800px !important; }
+    #section__speed__up .speed__up__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 287px;
+      width: 687px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/speed_up_phone__medium.jpg");
+      margin-left: 0;
+      margin-top: 56px;
+      position: relative; }
+  #section__ultrafast__wifi {
+    margin-top: 93px; }
+    #section__ultrafast__wifi .wd__feature__list {
+      margin: 20px auto 0;
+      width: 570px;
+      text-align: center;
+      padding-left: 33px; }
+      #section__ultrafast__wifi .wd__feature__list .wd__feature {
+        margin-bottom: 48px;
+        text-align: left; }
+        #section__ultrafast__wifi .wd__feature__list .wd__feature .wd__feature__data span {
+          padding-left: 2px; }
+      #section__ultrafast__wifi .wd__feature__list .feature__wlan span {
+        padding-left: 0 !important; }
+      #section__ultrafast__wifi .wd__feature__list .feature__speed {
+        padding-left: 20px; }
+    #section__ultrafast__wifi .wd__content {
+      margin-bottom: 36px; }
+      #section__ultrafast__wifi .wd__content .content__info {
+        width: 92%;
+        max-width: 658px !important; }
+      #section__ultrafast__wifi .wd__content .content__comment {
+        margin-left: -3px; }
+    #section__ultrafast__wifi ._remove_margin_top {
+      margin-top: 0 !important; }
+    #section__ultrafast__wifi .ultrafast__wifi__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 916px;
+      width: 100%;
+      max-width: 1098px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/3x_ultrafast_phone__medium.jpg");
+      background-position: center;
+      margin: 0 auto;
+      margin-top: -16px;
+      position: relative; }
+  #section__work__anywhere {
+    margin-top: 44px; }
+    #section__work__anywhere .wd__content .content__info {
+      width: 90%;
+      max-width: 658px !important; }
+    #section__work__anywhere .work__anywhere__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      left: -9px;
+      height: 980px;
+      width: 623px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/work-anywhere__medium.jpg");
+      background-position: center;
+      margin: 0 auto;
+      margin-top: 58px;
+      position: relative; }
+  #section__four__antennas {
+    margin-top: 78px; }
+    #section__four__antennas .wd__content .content__info {
+      width: 92%;
+      max-width: 658px !important;
+      margin-top: 22px !important; }
+    #section__four__antennas .four__antennas__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 241px;
+      width: 645px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/four_laser-engraved_medium.jpg");
+      margin: 0 auto;
+      margin-top: 62px;
+      position: relative; }
+    #section__four__antennas .four__antennas__img .wording__aux {
+      top: 30px;
+      left: 2px; }
+    #section__four__antennas .four__antennas__img .wording__wifi {
+      top: 30px;
+      left: 572px; }
+    #section__four__antennas .four__antennas__img .wording__main {
+      left: 2px;
+      top: 109px;
+      width: 40px; }
+    #section__four__antennas .four__antennas__img .wording__gps {
+      right: 0;
+      top: 110px; }
+  #section__omnidirectional {
+    margin-top: 126px; }
+    #section__omnidirectional .wd__feature__list {
+      margin-top: 36px; }
+      #section__omnidirectional .wd__feature__list .wd__feature {
+        padding-right: 5px; }
+        #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__data span {
+          padding-left: 2px; }
+        #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__discribe {
+          margin-top: -20px; }
+    #section__omnidirectional .omnidirectional__img .wording__dual {
+      top: 525px;
+      line-height: 25px;
+      left: 245px;
+      letter-spacing: 0; }
+    #section__omnidirectional .omnidirectional__img .wording__single {
+      left: 247px;
+      top: 1114px;
+      letter-spacing: 0; }
+    #section__omnidirectional .omnidirectional__img .wording_power {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      left: 274px;
+      top: 1200px;
+      font-size: 16px; }
+    #section__omnidirectional .wd__content .content__title {
+      width: 86%;
+      max-width: 572px !important; }
+    #section__omnidirectional .wd__content .content__info {
+      width: 88%;
+      max-width: 577px !important; }
+    #section__omnidirectional .omnidirectional__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 1258px;
+      width: 643px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/omnidirectional_antennas__medium.jpg");
+      margin: 0 auto;
+      margin-top: 64px;
+      position: relative; }
+  #section__satellite__navigation {
+    margin-top: 125px; }
+    #section__satellite__navigation .wd__content .content__title {
+      width: 100%; }
+    #section__satellite__navigation .wd__content .content__info {
+      width: 88%;
+      max-width: 677px !important; }
+    #section__satellite__navigation .satellite__navigation__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 449px;
+      width: 100%;
+      max-width: 1194px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/five_satellite__medium.jpg");
+      background-position: center;
+      margin: 53px auto 0;
+      position: relative; }
+  #section__pinpoint {
+    margin-top: 128px; }
+    #section__pinpoint .wd__content .content__info {
+      width: 87%;
+      max-width: 800px !important;
+      margin: 22px auto 0 auto !important; }
+    #section__pinpoint .pinpoint__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 390px;
+      width: 642px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/pinpoint_satellite__medium.png");
+      margin: 63px auto 0;
+      position: relative; }
+  #section__accurate {
+    margin-top: 128px; }
+    #section__accurate .wd__content .content__title {
+      width: 100%; }
+    #section__accurate .wd__content .content__info {
+      width: 93%;
+      max-width: 800px !important;
+      margin-top: 23px !important; }
+    #section__accurate .accurate__video__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      height: 268px;
+      width: 478px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/video__medium.jpg");
+      margin: 60px auto 0;
+      position: relative; }
+    #section__accurate .accurate__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      left: -46px;
+      height: 702px;
+      width: 568px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/accurate_every_phone__medium.jpg");
+      background-position: center;
+      margin: 80px auto 0;
+      position: relative; }
+  #section__next {
+    overflow: hidden;
+    margin-top: 93px !important;
+    padding-top: 63px; }
+    #section__next .wd__content {
+      height: 235px;
+      margin-bottom: 59px; }
+      #section__next .wd__content .content__slogan {
+        font-size: 28px;
+        padding-left: 1px; }
+      #section__next .wd__content .content__title {
+        font-size: 40px;
+        width: 49%;
+        max-width: 50% !important;
+        margin-top: 12px;
+        margin-left: 3px; }
+      #section__next .wd__content .content__link {
+        font-size: 20px;
+        margin-top: 16px; }
+    #section__next .next__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      right: -159px;
+      height: 316px;
+      width: 321px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/nexst_phone__medium.jpg");
+      margin: 0 auto;
+      margin-top: -297px;
+      position: relative; } }
+
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+  #section__boost__master .wd__spec__list {
+    width: 100%; } }
+
+@media only screen and (min-width: 800px) and (max-width: 1366px) {
+  #section__speed__up .speed__up__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: cover;
+    height: 262px;
+    width: 100%;
+    max-width: 833px;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/medium/speed_up_phone__medium__center.jpg");
+    margin: 56px auto 0 auto;
+    position: relative; } }
+
+@media all and (max-width: 720px) and (max-width: 720px) {
+  .section {
+    margin-top: 38px !important; }
+  .small_use {
+    display: inline; }
+  .wd__content {
+    width: 89.2% !important;
+    margin-top: 42px !important;
+    margin-left: 5.4% !important; }
+    .wd__content .content__title {
+      font-size: 29px;
+      width: 100% !important;
+      max-width: 700px !important;
+      line-height: 1.3; }
+    .wd__content .content__info {
+      font-size: 16.38px;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-top: 9px !important;
+      margin-left: 0 !important;
+      line-height: 24px !important; }
+    .wd__content .content__link {
+      font-size: 15.4px !important;
+      margin-top: 15px !important;
+      margin-left: 0px; }
+    .wd__content .content__comment {
+      font-size: 13.3px; }
+  .wd__spec__list {
+    vertical-align: top; }
+    .wd__spec__list .wd__spec {
+      display: inline-block !important;
+      position: relative !important;
+      height: 123px;
+      width: 123px;
+      margin-right: 8px;
+      margin-bottom: 20px;
+      margin-left: 8px;
+      overflow: hidden; }
+    .wd__spec__list .spec__detail {
+      font-size: 36px;
+      height: 123px;
+      width: 123px;
+      padding-bottom: 6px;
+      color: #a89d5b;
+      display: table-cell;
+      vertical-align: middle; }
+      .wd__spec__list .spec__detail span {
+        font-size: 22.75px;
+        padding: 0 0 0 2px;
+        padding-right: none;
+        padding-left: none; }
+    .wd__spec__list .spec_dis_top {
+      font-size: 11px;
+      position: absolute !important;
+      margin-top: 0px;
+      padding-top: 6px;
+      padding-bottom: 0px;
+      display: block; }
+    .wd__spec__list .spec_dis {
+      font-size: 11px;
+      position: absolute !important;
+      line-height: 14.4px;
+      letter-spacing: 0.5px;
+      bottom: 8px;
+      padding-bottom: 0px;
+      display: block; }
+  .wd__feature .wd__feature__data {
+    font-size: 47px;
+    margin-bottom: 11px; }
+    .wd__feature .wd__feature__data span {
+      font-size: 25px;
+      padding-left: 2px; }
+  .wd__feature .wd__feature__discribe, .wd__feature .wd__feature__discribe__top {
+    font-size: 12px;
+    letter-spacing: .1px; }
+  .wd__feature .wd__feature__data {
+    font-size: 47px;
+    margin-bottom: 11px; }
+  .wd__feature .wd__feature__discribe {
+    font-size: 12px;
+    letter-spacing: .1px; } }
+
+@media all and (max-width: 720px) {
+  #section__intro {
+    position: relative;
+    height: auto; }
+    #section__intro .column {
+      position: static; }
+    #section__intro .ellipse {
+      background-size: contain; }
+    #section__intro .wd__content {
+      margin: 33px 0px 0px 5% !important; }
+      #section__intro .wd__content .content__slogan {
+        font-size: 24px;
+        margin-left: -1px; }
+      #section__intro .wd__content .content__title {
+        font-size: 35px;
+        height: 129px;
+        width: 102% !important;
+        max-width: 390px !important;
+        margin-top: 5px;
+        margin-left: 1px;
+        line-height: 43px; }
+      #section__intro .wd__content .content__info {
+        font-size: 26px;
+        width: 75.7%;
+        margin-top: 35px;
+        margin-bottom: 128px;
+        margin-left: 2px;
+        line-height: 1.55;
+        letter-spacing: 0px; }
+    #section__intro .intro__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 506px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/intro_small.jpg");
+      background-position: bottom center;
+      margin-left: 0;
+      margin-top: -19px;
+      margin-bottom: 0;
+      position: relative !important; }
+    #section__intro .small_nouse {
+      display: none; }
+    #section__intro .wd__content {
+      position: relative !important;
+      z-index: 10; }
+  .compare__img__ubiquity__mobile {
+    margin-top: -17px; }
+  #section__boost__master {
+    margin-top: 12px !important; }
+    #section__boost__master .wd__content {
+      display: block;
+      margin-top: 0px !important; }
+      #section__boost__master .wd__content .content__info {
+        font-size: 20px;
+        text-align: center;
+        max-width: 510px !important;
+        margin: 9px auto 0 !important;
+        line-height: 27px !important; }
+    #section__boost__master .wd__spec__list .spec__five__magnet .spec__detail {
+      padding-right: 0px; }
+    #section__boost__master .boost__master__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      z-index: 0;
+      background-size: contain;
+      height: 79px;
+      width: 189px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/boostmaster_zentenna_logo_320_small.jpg");
+      background-position: center;
+      margin: 32px auto 35px auto;
+      position: relative; }
+    #section__boost__master .wd__spec__list {
+      vertical-align: top;
+      text-align: center;
+      width: 300px;
+      margin: 33px auto 0; }
+      #section__boost__master .wd__spec__list .wd__spec {
+        display: inline-block !important;
+        position: relative;
+        margin-right: 8px;
+        margin-left: 8px;
+        overflow: hidden; }
+      #section__boost__master .wd__spec__list .spec__detail {
+        color: #a89d5b;
+        display: table-cell;
+        vertical-align: middle; }
+        #section__boost__master .wd__spec__list .spec__detail span {
+          font-size: none;
+          padding: none;
+          padding-right: none;
+          padding-left: none; }
+      #section__boost__master .wd__spec__list .spec_dis_top {
+        position: absolute;
+        padding-bottom: 0px;
+        display: block; }
+      #section__boost__master .wd__spec__list .spec_dis {
+        position: absolute;
+        padding-bottom: 0px;
+        display: block; }
+  #section__fast__charge {
+    margin-top: 39px !important; }
+    #section__fast__charge .wd__content {
+      margin-top: 77px;
+      margin-bottom: 0px;
+      margin-left: 32px; }
+      #section__fast__charge .wd__content .content__title {
+        width: 100% !important;
+        margin-left: 1px; }
+      #section__fast__charge .wd__content .content__info {
+        text-align: left;
+        width: 84%;
+        max-width: 84%;
+        margin-top: 6px !important;
+        margin-left: 0px; }
+    #section__fast__charge .wd__feature__list {
+      margin-left: 5.4% !important;
+      text-align: left;
+      width: 320px !important; }
+      #section__fast__charge .wd__feature__list .feature__faster__charging {
+        margin-left: -2px; }
+        #section__fast__charge .wd__feature__list .feature__faster__charging .wd__feature__data span {
+          padding-left: 2px; }
+      #section__fast__charge .wd__feature__list .feature__charging-0-60 {
+        margin-left: 29px; }
+        #section__fast__charge .wd__feature__list .feature__charging-0-60 .wd__feature__data span {
+          padding-left: 2px; }
+      #section__fast__charge .wd__feature__list .feature__capacity {
+        margin-left: -2px;
+        margin-top: 21px; }
+        #section__fast__charge .wd__feature__list .feature__capacity .wd__feature__data span {
+          padding-left: 2px; }
+    #section__fast__charge .wd__feature {
+      margin-top: 23px; }
+    #section__fast__charge .wd__feature .wd__feature__data {
+      margin-bottom: 11px; }
+    #section__fast__charge .table {
+      margin-top: 6px !important;
+      margin-left: auto;
+      margin-right: auto;
+      width: 89%;
+      max-width: 500px;
+      margin: 0 auto; }
+      #section__fast__charge .table .table__column {
+        margin-bottom: 2px; }
+      #section__fast__charge .table .row__data {
+        font-size: 13px !important;
+        min-height: 42px;
+        padding-top: 14px;
+        padding-left: 0px; }
+      #section__fast__charge .table .col__label, #section__fast__charge .table .row__label {
+        font-size: 14px !important; }
+      #section__fast__charge .table .table__row .row__label {
+        top: 0px;
+        left: -2px;
+        position: relative !important; }
+      #section__fast__charge .table .offset__right {
+        padding-right: 2px; }
+      #section__fast__charge .table .col__single__magnet {
+        box-sizing: border-box;
+        padding-left: 2%;
+        padding-right: 2%;
+        vertical-align: bottom; }
+      #section__fast__charge .table .col__flagship {
+        box-sizing: border-box;
+        padding-left: 0;
+        vertical-align: bottom; }
+    #section__fast__charge .fast__charge__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 260px;
+      width: 100%;
+      max-width: 720px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/boostmaster_zentenna_phone_small.jpg");
+      background-position: center;
+      margin: 46px auto 0px auto;
+      padding-bottom: 0%;
+      position: relative; }
+  #section__more__talking {
+    margin-top: 106px !important; }
+    #section__more__talking .wd__content {
+      margin-top: 0px !important;
+      margin-bottom: 22px; }
+      #section__more__talking .wd__content .content__title {
+        text-align: center;
+        width: 100% !important;
+        margin: 0 auto; }
+      #section__more__talking .wd__content .content__info {
+        text-align: center;
+        width: 71%;
+        max-width: 400px !important;
+        margin: 8px auto 0 auto !important;
+        line-height: 25px !important; }
+    #section__more__talking .wd__feature__list {
+      width: 222px;
+      margin: 0 auto; }
+      #section__more__talking .wd__feature__list .wd__feature__data span {
+        letter-spacing: -.6px; }
+    #section__more__talking .feature__louder .wd__feature__discribe {
+      padding-left: 8px; }
+    #section__more__talking .feature__less__distortion {
+      margin-left: 36px; }
+      #section__more__talking .feature__less__distortion span {
+        padding-left: 2px !important; }
+      #section__more__talking .feature__less__distortion .wd__feature__discribe {
+        padding-left: 0px; }
+    #section__more__talking .plug__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      z-index: 9;
+      background-size: cover;
+      height: 85px;
+      width: 85px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/more_talking_adapter_small.jpg");
+      background-position: center;
+      margin: 32px auto 42px auto;
+      position: relative !important; }
+    #section__more__talking .wording__plug {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: #333333;
+      font-weight: 300;
+      position: absolute !important;
+      top: 94px;
+      bottom: 0px;
+      left: -2px;
+      font-size: 14px;
+      width: 100%;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: -.4px; }
+    #section__more__talking .more__talking__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      z-index: -9;
+      background-size: cover;
+      height: 344px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/more_talking_small.jpg");
+      background-position: center;
+      margin: 35px 0 0 0;
+      position: relative; }
+  #section__traiblazing {
+    margin-top: 64px !important; }
+    #section__traiblazing .content__logo {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 28px;
+      width: 180px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/boostmaster_logo_small_720.jpg");
+      background-position: center;
+      margin: 0 auto;
+      position: relative; }
+    #section__traiblazing .wd__content {
+      margin-top: 0px; }
+      #section__traiblazing .wd__content .content__title {
+        text-align: center;
+        width: 79% !important;
+        margin: 10px auto 0 auto; }
+      #section__traiblazing .wd__content .content__info {
+        text-align: center;
+        max-width: 500px !important;
+        margin: 8px auto 0 auto !important; }
+    #section__traiblazing .traiblazing__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 217px;
+      width: 320px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/boostmaster_info_small.jpg");
+      background-position: center;
+      margin: 25px auto 0 auto;
+      position: relative !important; }
+    #section__traiblazing .traiblazing__img .traiblazing__negative,
+    #section__traiblazing .traiblazing__img .traiblazing__electrolyte,
+    #section__traiblazing .traiblazing__img .traiblazing__positive {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      top: 169px;
+      font-size: 13px;
+      letter-spacing: 0px;
+      width: 87px;
+      text-align: center;
+      line-height: 16.9px; }
+    #section__traiblazing .traiblazing__img .traiblazing__negative {
+      left: 14px; }
+    #section__traiblazing .traiblazing__img .traiblazing__electrolyte {
+      left: 111px; }
+    #section__traiblazing .traiblazing__img .traiblazing__positive {
+      left: 218px; }
+  #section__speed__up {
+    margin-top: 59px !important; }
+    #section__speed__up .wd__feature__list {
+      text-align: center;
+      margin-top: 27px;
+      padding-left: 0px;
+      margin-left: 0px; }
+      #section__speed__up .wd__feature__list .feature__louder {
+        margin-left: auto;
+        margin-right: auto; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__discribe__top {
+        padding-left: 8px; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__data {
+        font-size: 47px;
+        padding-left: 2px; }
+      #section__speed__up .wd__feature__list .wd__feature .wd__feature__data span {
+        padding-left: 2px; }
+    #section__speed__up .wd__content {
+      text-align: left; }
+      #section__speed__up .wd__content .content__title {
+        text-align: left;
+        width: 81% !important;
+        margin: 0; }
+      #section__speed__up .wd__content .content__info {
+        text-align: left;
+        width: 100% !important;
+        margin: 0px !important;
+        margin-top: 5px !important;
+        line-height: 25px !important; }
+    #section__speed__up .speed__up__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: 521px 164px;
+      left: -4%;
+      height: 164px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/speed_up_phone_small.jpg");
+      background-position: right;
+      margin: 31px auto 0 auto;
+      position: relative !important; }
+  #section__ultrafast__wifi {
+    margin-top: 50px !important; }
+    #section__ultrafast__wifi .wd__feature__list {
+      width: 249px;
+      margin-top: 22px;
+      margin-left: auto;
+      margin-right: auto; }
+      #section__ultrafast__wifi .wd__feature__list .wd__feature {
+        margin-right: 19px;
+        margin-bottom: 20px; }
+        #section__ultrafast__wifi .wd__feature__list .wd__feature .wd__feature__discribe {
+          margin-top: -21px;
+          margin-left: -2px; }
+        #section__ultrafast__wifi .wd__feature__list .wd__feature .wd__feature__data span {
+          padding-left: 2px; }
+      #section__ultrafast__wifi .wd__feature__list .feature__speed {
+        margin-left: 0px; }
+      #section__ultrafast__wifi .wd__feature__list .feature__wlan {
+        margin-right: 23px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__wlan .wd__feature__data {
+          margin-left: -3px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__wlan .wd__feature__data span {
+          padding-left: 0; }
+      #section__ultrafast__wifi .wd__feature__list .feature__data__rate {
+        margin-right: 0px; }
+      #section__ultrafast__wifi .wd__feature__list .feature__speed {
+        margin-top: 5px;
+        margin-right: 40px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__discribe__top, #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__discribe {
+          padding-left: 1px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__speed .wd__feature__data {
+          margin-top: -4px; }
+      #section__ultrafast__wifi .wd__feature__list .feature__bandwidth {
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-top: 18px;
+        margin-right: 0px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__bandwidth .wd__feature__data {
+          margin-left: 1px;
+          margin-top: -2px; }
+        #section__ultrafast__wifi .wd__feature__list .feature__bandwidth .wd__feature__data span {
+          padding-left: 2px; }
+    #section__ultrafast__wifi .wd__content .content__title {
+      margin-left: -2px; }
+    #section__ultrafast__wifi .wd__content .content__info {
+      margin-top: 0px !important; }
+    #section__ultrafast__wifi .wd__content .content__comment {
+      margin-top: 8px;
+      padding-right: 1px; }
+    #section__ultrafast__wifi .small_use {
+      display: block; }
+    #section__ultrafast__wifi .ultrafast__wifi__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 504px;
+      width: 100%;
+      max-width: 720px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/3x_ultrafast_phone_small.jpg");
+      background-position: center;
+      margin: 0 auto;
+      margin-left: 0px;
+      margin-top: -6px;
+      position: relative; }
+  #section__work__anywhere {
+    margin-top: 3px !important; }
+    #section__work__anywhere .wd__content {
+      text-align: left; }
+      #section__work__anywhere .wd__content .content__title {
+        text-align: left;
+        margin: 0 auto; }
+      #section__work__anywhere .wd__content .content__info {
+        text-align: left;
+        width: 98% !important;
+        margin: 0 auto;
+        margin-top: 27px; }
+      #section__work__anywhere .wd__content .content__comment {
+        width: 98%; }
+    #section__work__anywhere .work__anywhere__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 0px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/work-anywhere_small.jpg");
+      background-position: top center;
+      margin: 0 auto;
+      margin-top: -3px;
+      padding-bottom: 209%;
+      position: relative; }
+  #section__four__antennas {
+    margin-top: 110px !important; }
+    #section__four__antennas .wd__content {
+      margin-top: -15px !important; }
+      #section__four__antennas .wd__content .content__title {
+        text-align: left;
+        width: 100% !important;
+        margin: 0px auto 0 auto; }
+      #section__four__antennas .wd__content .content__info {
+        text-align: left !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 28px auto 0 auto;
+        margin-top: 7px !important; }
+    #section__four__antennas .four__antennas__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 514px;
+      width: 237px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/four_laser-engraved_small.jpg");
+      background-position: center;
+      margin: 62px auto 0 auto;
+      position: relative !important; }
+    #section__four__antennas .wording__aux,
+    #section__four__antennas .wording__wifi,
+    #section__four__antennas .wording__main,
+    #section__four__antennas .wording__gps {
+      position: absolute !important;
+      font-size: 12px;
+      letter-spacing: 0px;
+      width: 115px;
+      text-align: right;
+      line-height: 14px; }
+    #section__four__antennas .wording__aux {
+      top: -29px;
+      left: 79px;
+      width: 40px; }
+    #section__four__antennas .wording__wifi {
+      top: -29px;
+      right: 170px;
+      width: 73px; }
+    #section__four__antennas .wording__main {
+      top: 515px;
+      left: 79px; }
+    #section__four__antennas .wording__gps {
+      top: -29px;
+      right: 34px;
+      width: 98px; }
+  #section__omnidirectional {
+    margin-top: 87px !important; }
+    #section__omnidirectional .omnidirectional__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 725px;
+      width: 320px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/omnidirectional_antennas_small.jpg");
+      background-position: center;
+      margin: 40px auto 0;
+      position: relative; }
+    #section__omnidirectional .wd__content {
+      width: 88% !important;
+      margin: 0 auto; }
+      #section__omnidirectional .wd__content .content__title {
+        text-align: center;
+        margin: 0 auto; }
+      #section__omnidirectional .wd__content .content__info {
+        text-align: center;
+        width: 72%;
+        margin: 0 auto;
+        margin-top: 9px !important; }
+    #section__omnidirectional .wd__feature__list {
+      text-align: center;
+      margin-top: 20px; }
+      #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__discribe {
+        margin-top: -24px; }
+      #section__omnidirectional .wd__feature__list .wd__feature .wd__feature__data span {
+        font-size: 19px;
+        padding-left: 2px; }
+    #section__omnidirectional .wording__single {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      position: relative !important;
+      top: 633px;
+      left: -1px;
+      text-align: center;
+      z-index: 10; }
+    #section__omnidirectional .wording__dual {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      position: relative !important;
+      left: 89px;
+      width: 140px;
+      text-align: center;
+      top: 279px;
+      z-index: 10;
+      line-height: 17px; }
+    #section__omnidirectional .wording_power {
+      font-family: "Myriad-pro-n4", "Myriad-pro", "Segoe UI", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      position: relative !important;
+      font-size: 13px;
+      top: 635px;
+      left: 124px;
+      text-align: center;
+      z-index: 10; }
+  #section__satellite__navigation {
+    margin-top: 59px !important; }
+    #section__satellite__navigation .satellite__navigation__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: cover;
+      height: 0;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/five_satellite_small.jpg");
+      background-position: center;
+      margin: 31px auto 0;
+      padding-bottom: 78%;
+      position: relative; }
+    #section__satellite__navigation .wd__content .content__title {
+      text-align: left;
+      width: 97% !important;
+      margin-left: 0; }
+    #section__satellite__navigation .wd__content .content__info {
+      text-align: left;
+      width: 67%;
+      margin: 0 auto;
+      margin-top: 7px !important; }
+  #section__pinpoint {
+    margin-top: 60px !important; }
+    #section__pinpoint .pinpoint__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 0;
+      width: 100%;
+      max-width: 320px;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/pinpoint_satellite_small.jpg");
+      background-position: center;
+      margin: 32px auto 31px auto;
+      padding-bottom: 63%;
+      position: relative; }
+    #section__pinpoint .wd__content .content__title {
+      text-align: left;
+      width: 97% !important;
+      margin-left: -1px; }
+    #section__pinpoint .wd__content .content__info {
+      text-align: left;
+      width: 55%;
+      margin: 0 auto; }
+  #section__accurate {
+    margin-top: 27px !important; }
+    #section__accurate .wd__content {
+      margin-top: 166px;
+      margin-left: 67px; }
+      #section__accurate .wd__content .content__title {
+        width: 90% !important; }
+      #section__accurate .wd__content .content__info {
+        width: 77%;
+        margin-top: 9px !important;
+        margin-left: 1px;
+        padding-left: 0; }
+    #section__accurate .accurate__video__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: contain;
+      height: 165px;
+      width: 89%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/video_small.jpg");
+      background-position: center;
+      margin: 0 auto;
+      margin-top: 29px;
+      position: relative; }
+    #section__accurate .accurate__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: 392px;
+      height: 423px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/accurate_every_phone_small.jpg");
+      background-position: center;
+      margin-left: 0px;
+      margin-top: 39px;
+      padding-bottom: 0%;
+      position: relative; }
+  #section__next {
+    margin-top: 54px;
+    padding-top: 0px;
+    background-color: #f7f7f7;
+    margin-top: 0px; }
+    #section__next .wd__content {
+      margin-top: 30px !important;
+      margin-left: 24px !important; }
+      #section__next .wd__content .content__slogan {
+        font-size: 22px; }
+      #section__next .wd__content .content__title {
+        font-size: 27px;
+        width: 88% !important;
+        margin-top: 9px !important;
+        margin-left: 1px !important;
+        letter-spacing: -0.2px; }
+      #section__next .wd__content .content__link {
+        font-size: 20px;
+        margin-top: 19px;
+        margin-left: 2px; }
+    #section__next .next__img {
+      background-repeat: no-repeat;
+      z-index: 2;
+      background-size: 412px;
+      height: 249px;
+      width: 100%;
+      background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/next_phone_small.png");
+      background-position: center;
+      margin: 0 auto;
+      margin-top: 29px;
+      position: relative; } }
+
+@media only screen and (min-width: 460px) and (max-width: 720px) {
+  #section__fast__charge .table {
+    margin-top: 28px !important; }
+  #section__fast__charge .wd__feature__list {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left;
+    padding-left: 5px;
+    width: 414px !important; }
+    #section__fast__charge .wd__feature__list .feature__capacity {
+      margin-left: 35px;
+      margin-top: 23px; } }
+
+@media only screen and (min-width: 470px) and (max-width: 720px) {
+  #section__speed__up .speed__up__img {
+    background-position: left -71px center;
+    width: 100%;
+    left: 0px; } }
+
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+  #section__speed__up .speed__up__img {
+    background-position: top center; } }
+
+@media only screen and (min-width: 375px) and (max-width: 720px) {
+  #section__work__anywhere .work__anywhere__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: contain;
+    height: 735px;
+    width: 100%;
+    background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/ubiquity/images/small/work-anywhere_small.jpg");
+    background-position: top center;
+    margin: 0 auto;
+    margin-top: -3px;
+    padding-bottom: 0%;
+    position: relative; } }
+
+@media only screen and (min-width: 375px) and (max-width: 720px) {
+  #section__pinpoint .pinpoint__img {
+    background-repeat: no-repeat;
+    z-index: 2;
+    height: 203px;
+    width: 100%;
+    max-width: 320px;
+    padding-bottom: 0%;
+    position: relative; } }

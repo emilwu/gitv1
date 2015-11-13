@@ -1,0 +1,14 @@
+.large_use {
+  display: inline; }
+
+#section__intro {
+  max-width: 1920px;
+  margin: 0 auto; }
+
+#section__intro .intro__img-red {
+  background-position-x: left;
+  margin-left: 660px; }
+
+#section__intro .intro__img-black {
+  background-position-x: right;
+  margin-left: 775px; }

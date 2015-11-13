@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-game {
+    width: 42px;
+    height: 27px;
+    background-position: -5px -5px;
+}
+
+.sprite-movie {
+    width: 28px;
+    height: 28px;
+    background-position: -57px -5px;
+}
+
+.sprite-music {
+    width: 29px;
+    height: 28px;
+    background-position: -95px -5px;
+}
+
+.sprite-sonicmaster {
+    width: 483px;
+    height: 87px;
+    background-position: -5px -43px;
+}
+
+.sprite-vocal {
+    width: 31px;
+    height: 29px;
+    background-position: -5px -140px;
+}

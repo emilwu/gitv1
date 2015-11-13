@@ -1,0 +1,25 @@
+.large_use {
+  display: inline; }
+
+.chart_left {
+  margin-left: 94px;
+  margin-top: 55px; }
+
+#section__intro {
+  max-width: 1920px;
+  margin: 0 auto; }
+  #section__intro .intro__img {
+    width: 100%;
+    background-position-x: center; }
+
+#section__accurate .video {
+  width: 958px;
+  height: 260px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/performance/images/large/video/958x260.png");
+  background-repeat: no-repeat;
+  position: center; }
+
+#section__4g__ram .ram__img {
+  left: 4px; }

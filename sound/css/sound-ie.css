@@ -1,0 +1,32 @@
+.large_use {
+  display: inline; }
+
+#section__intro {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 827px; }
+
+#section__intro .intro__img {
+  background-position-x: center;
+  background-position-y: 0px;
+  top: -80px;
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/intro.png"); }
+
+#section__intro .wd__content .content__info {
+  max-width: 550px; }
+
+#section__audioWizard .audiowizard_icon {
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/ie_use/audiowizard_icon.png"); }
+
+#section__modes .radar__music .logo {
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/ie_use/music.png"); }
+
+#section__modes .radar__movie .logo {
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/ie_use/movie.png"); }
+
+#section__modes .radar__gaming .logo {
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/ie_use/game.png"); }
+
+#section__modes .radar__vocal .logo {
+  background-image: url("/websites/global/products/BXbNqJplzZiLmk6G/v1/sound/images/large/ie_use/vocal.png"); }

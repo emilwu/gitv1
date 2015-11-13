@@ -1,0 +1,15 @@
+.large_use {
+  display: inline; }
+
+#section__intro {
+  max-width: 1920px;
+  margin: 0 auto \9; }
+
+#section__intro {
+  min-height: 833px; }
+  #section__intro .column-spec {
+    position: relative; }
+  #section__intro #intro__video {
+    position: absolute;
+    top: 311px;
+    left: 182px; }
